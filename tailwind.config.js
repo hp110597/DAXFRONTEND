@@ -15,6 +15,13 @@ module.exports = {
       },
       animation: {
         dialogFadeIN: 'dialogFadeIN 1s ease',
+      },
+      fontFamily: {
+        sans: 'Averta,sans-serif',
+        avertaBold: 'AvertaBold'
+      },
+      colors: {
+        'primary': '#86CFF2'
       }
     },
   },

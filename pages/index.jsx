@@ -1,13 +1,19 @@
 import Head from "next/head";
-import { useState } from "react";
-import OrderDialog from "../scenes/home/order_dialog";
-import styles from "../styles/Home.module.css";
+import { useCallback, useMemo, useState } from "react";
+import OrderDialog from "scenes/home/order_dialog";
 
 export default function Home() {
   const [showDialog, setShowDialog] = useState(false);
-  const handleShowModal = () => {
+  const handleShowDialog = useCallback(() => {
     setShowDialog(!showDialog);
-  }
+  }, [showDialog])
+
+  const orderDialog = useMemo(() => {
+    if (showDialog)
+      return <OrderDialog closeDiaLog={handleShowDialog} />;
+  }, [showDialog])
+
+
   return (
     <div>
       <Head>
@@ -21,10 +27,10 @@ export default function Home() {
         <button
           type='button'
           className="bg-green-300 p-2 rounded-md hover:bg-slate-600 hover:text-white hover:scale-125 transition"
-          onClick={handleShowModal}>Show Dialog
+          onClick={handleShowDialog}>Show Dialog
         </button>
       </div>
-      {showDialog ? <OrderDialog closeDiaLog={handleShowModal} /> : null}
+      {orderDialog}
     </div>
   );
 }
