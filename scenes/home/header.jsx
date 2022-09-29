@@ -4,9 +4,9 @@ export default function header() {
   return (
     <>
     <div className="header" >
-      <div className="flex justify-between items-center " style={{ backgroundColor: "#1E1E1E" }}>
+      <div className="flex justify-between items-center" style={{ backgroundColor: "#1E1E1E" }}>
         <div className="logo">
-          <img className="ml-7 my-3" src="/img/DAX Original.png" alt="..." />
+          <img className="ml-7 my-3" src="/images/logo.png" alt="..." />
         </div>
         <div className="navbar">
           <a href="#" className="mx-7 text-white">
