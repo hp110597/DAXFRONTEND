@@ -11,10 +11,16 @@ module.exports = {
         dialogFadeIN: {
           '0%': { transform: 'translateY(-25%)', opacity: '0.8' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        imageOpacity:{
+          '0%': {  opacity: '0' },
+          '100%': {  opacity: '1' },
         }
       },
       animation: {
         dialogFadeIN: 'dialogFadeIN 1s ease',
+        imageOpacity:'imageOpacity 1s ease'
+
       },
       fontFamily: {
         sans: 'Averta,sans-serif',

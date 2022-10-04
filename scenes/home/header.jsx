@@ -1,9 +1,10 @@
-import React from 'react'
+import ImageBackground from "components/image";
+import React from "react";
 
 export default function header() {
   return (
     <>
-    <div className="header" >
+      {/* <div className="header" >
       <div className="flex justify-between items-center" style={{ backgroundColor: "#1E1E1E" }}>
         <div className="logo">
           <img className="ml-7 my-3" src="/images/logo.png" alt="..." />
@@ -34,9 +35,13 @@ export default function header() {
         allowFullScreen
       />
     </div>
-    </div>
-   
-  </>
-
-  )
+    </div> */}
+      <ImageBackground
+        src="/images/logo.png"
+        alt="..."
+        width="200"
+        height="200"
+      />
+    </>
+  );
 }
