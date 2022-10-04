@@ -12,7 +12,7 @@ const Footer = () => {
                         height={'py-[10px]'}
                         width={'px-[30px]'}
                         border={'rounded-[30px]'}
-                        href={'https://vlxx.sex/'} />
+                        href={'https://www.facebook.com/longthanhplastic'} />
                 </div>
                 <div className=' basis-1/2 flex justify-end pr-[30px] pt-[30px]'>
                     <ButtonImage
@@ -26,12 +26,12 @@ const Footer = () => {
             </div>
             <div className='basis-1/6'>
                 <div className='flex justify-end pr-[30px]'>
-                    <TextButton text={'Chính sách bảo mật'} />
+                    <TextButton text={'Chính sách bảo mật'} href={'https://www.facebook.com/longthanhplastic'} />
                 </div>
             </div>
             <div className=' basis-1/6 flex flex-row'>
                 <div className='basis-1/3 pl-[30px]'>
-                    <TextButton text={"285 CMT8, p10, Q.10, Tp.HCM, VietNam"} />
+                    <TextButton text={"285 CMT8, p10, Q.10, Tp.HCM, VietNam"} href={'https://www.facebook.com/longthanhplastic'} />
                 </div>
                 <div className='basis-1/3'>
                     <div className='basis-1/3 flex justify-center items-center gap-x-[30px]'>
@@ -54,15 +54,16 @@ const Footer = () => {
                             />
                         </div>
                         <div className='flex'>
-                            <TextButton text={"Follow us"} />
+                            <TextButton text={"Follow us"} href={'https://www.facebook.com/longthanhplastic'} />
                         </div>
                     </div>
                 </div>
                 <div className='basis-1/3 pr-[30px] flex justify-end'>
-                    <TextButton text={'© 2022 DAX GROUP LTD.'} />
+                    <TextButton text={'© 2022 DAX GROUP LTD.'} href={'https://www.facebook.com/longthanhplastic'} />
                 </div>
             </div>
         </div>
+
     )
 }
 

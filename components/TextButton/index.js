@@ -1,8 +1,8 @@
 import React, {memo} from 'react'
 
-const TextButton = ({ text}) => {
+const TextButton = (props) => {
     return (
-        <a className='text-white text-[16px] leading-[60px] font-normal cursor-pointer ' href='http://vlxx.sex' target="_blank">{text}</a>
+        <a className='text-white text-[16px] leading-[60px] font-normal cursor-pointer ' href={ props.href} target="_blank">{props.text}</a>
     );
 };
 
