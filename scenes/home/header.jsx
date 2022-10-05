@@ -28,7 +28,6 @@ export default function header() {
       <iframe
         style={{width:'100vw'}}
         height={500}
-
         src="https://www.youtube.com/embed/HePO4DWDDq8"
         frameBorder={0}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -41,6 +40,7 @@ export default function header() {
         alt="..."
         width="200"
         height="200"
+        className="animate-imageOpacity"
       />
     </>
   );

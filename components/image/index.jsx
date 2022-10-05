@@ -9,10 +9,7 @@ const ImageBackground = (props) => {
       width={props.width}
       height={props.height}
       objectFit="contain"
-      className="animate-imageOpacity"
-
-
-
+      className={props.className}
     />
   );
 };
