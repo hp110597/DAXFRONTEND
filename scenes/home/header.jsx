@@ -1,7 +1,19 @@
 import ImageBackground from "components/image";
-import React from "react";
+import React, { useMemo } from "react";
+import Keyframe, { Keyframes } from "scenes/img";
+import styles from "scenes/img/styles";
+
 
 export default function header() {
+
+  // const imgStyle = useMemo(()=>{
+  //   return {...styles.animate}
+  // },[])
+
+  const imgFade = useMemo(()=>{
+    return <Keyframes name="oscillate" from={{ opacity: 0.9 }} to={{ opacity: 0.2 }} />
+  },[])
+
   return (
     <>
       {/* <div className="header" >
@@ -35,13 +47,22 @@ export default function header() {
       />
     </div>
     </div> */}
+    
+      <div className="header">
+      <div>
       <ImageBackground
+        // style = {imgStyle}
         src="/images/logo.png"
         alt="..."
         width="200"
         height="200"
-        className="animate-imageOpacity"
+        className="transition fade duration-150 ease-in-out "
+        keyframes={<Keyframes name="fade" from={{ opacity: 0.9 }} to={{ opacity: 0.2 }} />}
       />
+       
+      </div>
+
+      </div>
     </>
   );
 }
