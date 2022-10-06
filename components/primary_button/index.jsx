@@ -10,8 +10,9 @@ const PrimaryButton = (props) => {
         + props.border
     ), [props.fontSize, props.height, props.width, props.border]);
     return (
-        <a href={props.href} target='_blank'
-            className={classString}>{props.text}
+        <a href={props.href} target='_blank' rel="noreferrer"
+            className={classString}>
+            {props.text}
         </a>
     )
 }

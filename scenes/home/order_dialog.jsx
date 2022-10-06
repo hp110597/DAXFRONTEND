@@ -92,14 +92,14 @@ const OrderDialog = ({ closeDiaLog }) => {
   //End Validate action onChane Input Field
 
   return (
-    <div className="fixed inset-0 bg-gray-700 bg-opacity-50 flex justify-center items-center ">
-      <div className="bg-white rounded-lg inline-block w-11/12 md:max-w-2xl relative box-border p-7 animate-dialogFadeIN">
-        <span className="absolute top-5 right-5 cursor-pointer text-2xl" onClick={closeDiaLog}>
+    <div className="fixed inset-0 bg-gray-700 bg-opacity-50 flex justify-center items-center z-[1000]">
+      <div className="bg-bgPrimary text-white rounded-lg inline-block w-11/12 md:max-w-2xl relative -z-10 box-border p-7 animate-dialogFadeIN">
+        <span className="absolute top-5 right-5 cursor-pointer" onClick={closeDiaLog}>
           <ButtonImage
             src='/images/close.png'
             atl='Icons Close'
-            width='15'
-            height='15'
+            width={30}
+            height={30}
           />
         </span>
         <h3 className="text-center mb-10 text-lg">Bạn có thể mua hàng tại</h3>
@@ -110,24 +110,37 @@ const OrderDialog = ({ closeDiaLog }) => {
             href='https://www.facebook.com/longthanhplastic'
             src='/images/facebook.png'
             atl="Image FaceBook"
-            width='30'
-            height='30'
+            width={30}
+            height={30}
           />
           <ButtonImage
             href='https://www.facebook.com/longthanhplastic'
             src='/images/instagram.png'
             atl="Image FaceBook"
-            width='30'
-            height='30'
+            width={30}
+            height={30}
           />
         </div>
 
         {/*Line*/}
         <div className='relative mb-6'>
           <div className="h-px bg-gray-300"></div>
-          <span className="inline-block p-4 bg-white absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">hoặc</span>
+          <span className="inline-block p-4 bg-bgPrimary absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">hoặc</span>
         </div>
 
+        {/*Image Bubbles */}
+        <span className="absolute top-[5rem] left-2/4 cursor-pointer -translate-x-2/4 -z-1">
+          <ButtonImage
+            src='/images/bubbles_1.png'
+            atl='Bubble Image'
+            width={400}
+            height={200}
+          />
+        </span>
+
+
+
+        {/*Form*/}
         <form action="post" onSubmit={handleOnSubmit}>
           <div className="mb-6">
             <InputField
