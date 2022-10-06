@@ -22,20 +22,27 @@ module.exports = {
             transform: 'translateY(var(--endPosition))'
           }
         }
+      ,
+          imageFadeIn: {
+            '0%': { opacity: '0', transform: 'translateX(var(--startX)) translateY(var(--startY))' },
+            '100%': { opacity: '1', transform: 'translateX(var(--endX))  translateY(var(--endY))' },
+          }
+        },
+        animation: {
+          dialogFadeIN: 'dialogFadeIN 1s ease',
+          textAnimate: 'textAnimate var(--duration) ease-in',
+          imageFadeIn: 'imageFadeIn 3s forwards'
+
+        },
+        fontFamily: {
+          sans: 'Averta,sans-serif',
+          avertaBold: 'AvertaBold',
+          storyBook: 'StorybookRegular'
+        },
+        colors: {
+          'primary': '#86CFF2'
+        }
       },
-      animation: {
-        dialogFadeIN: 'dialogFadeIN 1s ease',
-        textAnimate:'textAnimate var(--duration) ease-in',
-      },
-      fontFamily: {
-        sans: 'Averta,sans-serif',
-        avertaBold: 'AvertaBold',
-        storyBook:'StorybookRegular'
-      },
-      colors: {
-        'primary': '#86CFF2'
-      }
     },
-  },
-  plugins: [],
-}
+    plugins: [],
+  }
