@@ -1,42 +1,31 @@
-import React from 'react'
+import ImageBackground from "components/image";
+import React, { useMemo } from "react";
 
 export default function header() {
+
+
+  
   return (
-    <>
-    <div className="header" >
-      <div className="flex justify-between items-center" style={{ backgroundColor: "#1E1E1E" }}>
-        <div className="logo">
-          <img className="ml-7 my-3" src="/images/logo.png" alt="..." />
-        </div>
-        <div className="navbar">
-          <a href="#" className="mx-7 text-white">
-            Production collection
-          </a>
-          <a href="#" className="mx-7 text-white">
-            About artist
-          </a>
-          <a href="#" className="mx-7 text-white">
-            About brand
-          </a>
-          <a href="#" className="mx-7 text-white">
-            Contact us
-          </a>
-        </div>
-      </div>
-      <div className="introduce">
-      <iframe
-        style={{width:'100vw'}}
-        height={500}
+    <div className="header bg-black relative">
 
-        src="https://www.youtube.com/embed/HePO4DWDDq8"
-        frameBorder={0}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
+      <ImageBackground
+        startX='-100%'
+        endY='-30%'
+        startY='-80%'
+        src="/images/pray.png"
+        alt="..."
+        
+        className="animate-imageFadeIn w-[200px] h-[200px] "
       />
-    </div>
-    </div>
+      <ImageBackground
+        startX='-100%'
+        endX='20%' 
+        src="/images/mask.png"
+        alt="..."
+       
+        className="animate-imageFadeIn w-[200px] h-[200px] absolute top-0 right-0 "
+      />
    
-  </>
-
-  )
+    </div>
+  );
 }
