@@ -11,14 +11,26 @@ module.exports = {
         dialogFadeIN: {
           '0%': { transform: 'translateY(-25%)', opacity: '0.8' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        textAnimate: {
+          '0%': {
+            opacity: '0.5',
+            transform: 'translateY(var(--startPosition))'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(var(--endPosition))'
+          }
         }
       },
       animation: {
         dialogFadeIN: 'dialogFadeIN 1s ease',
+        textAnimate:'textAnimate var(--duration) ease-in',
       },
       fontFamily: {
         sans: 'Averta,sans-serif',
-        avertaBold: 'AvertaBold'
+        avertaBold: 'AvertaBold',
+        storyBook:'StorybookRegular'
       },
       colors: {
         'primary': '#86CFF2'
