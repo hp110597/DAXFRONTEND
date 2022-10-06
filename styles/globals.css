@@ -19,6 +19,10 @@
     font-family: 'AvertaBold';
     src : url('/fonts/Averta-ExtraBold.otf')
   }
+  @font-face {
+    font-family: 'StorybookRegular';
+    src : url('/fonts/Storybook-Regular.ttf')
+  }
 }
 
 @layer utilities{
@@ -26,5 +30,3 @@
     word-spacing : 20;
   }
 }
-
-

@@ -20,25 +20,41 @@ module.exports = {
         scroll: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(var(--percentage))' },
+        },
+        textAnimate: {
+          '0%': {
+            opacity: '0.5',
+            transform: 'translateY(var(--startPosition))'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(var(--endPosition))'
+          }
+        },
+        imageFadeIn: {
+          '0%': { opacity: '0', transform: 'translateX(var(--startX)) translateY(var(--startY))' },
+          '100%': { opacity: '1', transform: 'translateX(var(--endX))  translateY(var(--endY))' },
         }
       },
       animation: {
         dialogFadeIN: 'dialogFadeIN 1s ease',
         dotActiveFadein: 'dotActiveFadein 1s ease',
         textScroll: 'scroll 10s linear',
+        textAnimate: 'textAnimate var(--duration) ease-in',
+        imageFadeIn: 'imageFadeIn 3s forwards'
       },
       fontFamily: {
         sans: 'Averta,sans-serif',
-        avertaBold: 'AvertaBold'
+        avertaBold: 'AvertaBold',
+        storyBook: 'StorybookRegular'
       },
       colors: {
         'primary': '#86CFF2',
         'bgPrimary': `#000000`
-
       },
       zIndex: {
         '1': '1',
-      }
+      },
     },
   },
   plugins: [],

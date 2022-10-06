@@ -6,6 +6,7 @@ import PaginateSlider from "components/pagination";
 import Test from "scenes/home/test";
 import PrimaryButton_2 from "components/primary_button_test";
 import AboutBrand from "scenes/home/about_brand";
+import Header from "scenes/home/header";
 
 export default function Home() {
   const [showDialog, setShowDialog] = useState(false);
@@ -29,6 +30,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* <Footer /> */}
+      <Header />
+
 
       <div className="flex justify-center items-center">
         <button
