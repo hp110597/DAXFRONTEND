@@ -2,35 +2,28 @@ import ImageBackground from "components/image";
 import React, { useMemo } from "react";
 
 export default function header() {
+
+
+  
   return (
-    <div className="header  bg-black ">
-      {/* <span className="text-white">123455</span> */}
+    <div className="header bg-black relative">
 
       <ImageBackground
-        style={{
-          "--startX": "-100%",
-          "--endX": "0%",
-          "--startY": "-80%",
-          "--endY": "-30%",
-        }}
+        startX='-100%'
+        endY='-30%'
+        startY='-80%'
         src="/images/pray.png"
         alt="..."
-        width="300"
-        height="300"
-        className="animate-imageFadeIn relative top-0 left-0 "
+        
+        className="animate-imageFadeIn w-[200px] h-[200px] "
       />
       <ImageBackground
-        style={{
-          "--startX": "-100%",
-          "--endX": "-20%",
-          "--startY": "0%",
-          "--endY": "0%",
-        }}
+        startX='-100%'
+        endX='20%' 
         src="/images/mask.png"
         alt="..."
-        width="300"
-        height="300"
-        className="animate-imageFadeIn absolute top-0 left-0  "
+       
+        className="animate-imageFadeIn w-[200px] h-[200px] absolute top-0 right-0 "
       />
    
     </div>
