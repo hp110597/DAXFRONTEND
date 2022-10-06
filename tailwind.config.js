@@ -12,24 +12,37 @@ module.exports = {
           '0%': { transform: 'translateY(-25%)', opacity: '0.8' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
-        imageFadeIn:{
-          '0%': {  opacity: '0',transform:'translateX(var(--startX)) translateY(var(--startY))' },
-          '100%': {  opacity: '1',transform:'translateX(var(--endX))  translateY(var(--endY))' },
+        textAnimate: {
+          '0%': {
+            opacity: '0.5',
+            transform: 'translateY(var(--startPosition))'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(var(--endPosition))'
+          }
+        }
+      ,
+          imageFadeIn: {
+            '0%': { opacity: '0', transform: 'translateX(var(--startX)) translateY(var(--startY))' },
+            '100%': { opacity: '1', transform: 'translateX(var(--endX))  translateY(var(--endY))' },
+          }
+        },
+        animation: {
+          dialogFadeIN: 'dialogFadeIN 1s ease',
+          textAnimate: 'textAnimate var(--duration) ease-in',
+          imageFadeIn: 'imageFadeIn 3s forwards'
+
+        },
+        fontFamily: {
+          sans: 'Averta,sans-serif',
+          avertaBold: 'AvertaBold',
+          storyBook: 'StorybookRegular'
+        },
+        colors: {
+          'primary': '#86CFF2'
         }
       },
-      animation: {
-        dialogFadeIN: 'dialogFadeIN 1s ease',
-        imageFadeIn:'imageFadeIn 3s forwards'
-
-      },
-      fontFamily: {
-        sans: 'Averta,sans-serif',
-        avertaBold: 'AvertaBold'
-      },
-      colors: {
-        'primary': '#86CFF2'
-      }
     },
-  },
-  plugins: [],
-}
+    plugins: [],
+  }
