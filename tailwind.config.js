@@ -12,14 +12,14 @@ module.exports = {
           '0%': { transform: 'translateY(-25%)', opacity: '0.8' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
-        imageFadeIn:{
+        imageShowUp:{
           '0%': {  opacity: '0',transform:'translateX(var(--startX)) translateY(var(--startY))' },
           '100%': {  opacity: '1',transform:'translateX(var(--endX))  translateY(var(--endY))' },
         }
       },
       animation: {
         dialogFadeIN: 'dialogFadeIN 1s ease',
-        imageFadeIn:'imageFadeIn 3s forwards'
+        imageShowUp:'imageShowUp 3s forwards'
 
       },
       fontFamily: {
