@@ -15,21 +15,35 @@ module.exports = {
         imageShowUp:{
           '0%': {  opacity: '0',transform:'translateX(var(--startX)) translateY(var(--startY))' },
           '100%': {  opacity: '1',transform:'translateX(var(--endX))  translateY(var(--endY))' },
+        },
+        textAnimate: {
+          '0%': {
+            opacity: '0.5',
+            transform: 'translateY(var(--startPosition))'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(var(--endPosition))'
+          }
         }
       },
       animation: {
         dialogFadeIN: 'dialogFadeIN 1s ease',
-        imageShowUp:'imageShowUp 3s forwards'
+        imageShowUp:'imageShowUp 3s forwards',
+        textAnimate: 'textAnimate var(--duration) ease-in',
+
 
       },
       fontFamily: {
         sans: 'Averta,sans-serif',
-        avertaBold: 'AvertaBold'
+        avertaBold: 'AvertaBold',
+        storyBook: 'StorybookRegular'
+
       },
       colors: {
         'primary': '#86CFF2'
       }
     },
-  },
-  plugins: [],
+    plugins: [],
+  }
 }

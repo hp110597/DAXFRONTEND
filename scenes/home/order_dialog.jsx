@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState, memo } from "react";
 import ButtonImage from "components/image_button";
 import InputField from "components/input_field";
-import { useDebounce } from "utils/helper";
+import { useDebounce } from "hooks/helper";
 import { regexName, regexEmail, regexPhone } from "utils/regex";
 
 const OrderDialog = ({ closeDiaLog }) => {
@@ -14,17 +14,17 @@ const OrderDialog = ({ closeDiaLog }) => {
   const debouncedEmail = useDebounce(inputEmail, 400);
   //Validate InputNameChange
   useEffect(() => {
-    const patternName = regexName();
+    const patternName = regexName;
     validateChange(patternName, 'name', inputName, 'Họ tên');
   }, [debouncedName])
   //Validate InputNameChange
   useEffect(() => {
-    const patternPhone = regexPhone();
+    const patternPhone = regexPhone;
     validateChange(patternPhone, 'phone', inputPhone, 'Số điện thoại');
   }, [debouncedPhone])
   //Validate InputPhoneChange
   useEffect(() => {
-    const patternEmail = regexEmail();
+    const patternEmail = regexEmail;
     validateChange(patternEmail, 'email', inputEmail, 'Email');
   }, [debouncedEmail])
 
@@ -32,7 +32,7 @@ const OrderDialog = ({ closeDiaLog }) => {
   const handleOnSubmit = useCallback((e) => {
     const newErrorMessage = { ...errorMessge }
     //Validate inputName
-    const patternName = regexName();
+    const patternName = regexName;
     if (!inputName) {
       newErrorMessage = { ...newErrorMessage, name: 'Họ tên không được bỏ trống' }
     } else if (!patternName.test(inputName)) {
@@ -40,7 +40,7 @@ const OrderDialog = ({ closeDiaLog }) => {
     }
 
     //Validate inputPhoneNumber
-    const patternPhone = regexPhone();
+    const patternPhone = regexPhone;
     if (!inputPhone) {
       newErrorMessage = { ...newErrorMessage, phone: 'Số điện thoại không được bỏ trống' }
     } else if (!patternPhone.test(inputPhone)) {
@@ -49,7 +49,7 @@ const OrderDialog = ({ closeDiaLog }) => {
 
 
     //Validate inputEmail
-    const patternEmail = regexEmail();
+    const patternEmail = regexEmail;
     if (!inputEmail) {
       newErrorMessage = { ...newErrorMessage, email: 'Email không được bỏ trống' }
     } else if (patternEmail.test(inputEmail)) {
