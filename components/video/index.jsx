@@ -8,7 +8,7 @@ const Video = (props) => {
       <video
         className="relative opacity-100"
         src={props.src}
-        autoPlay
+        // autoPlay
         loop
         muted
       ></video>

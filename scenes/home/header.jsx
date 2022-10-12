@@ -4,15 +4,15 @@ import React, { useMemo } from "react";
 
 export default function header() {
   return (
-    <div className="header pb-[40px] bg-black relative ">
+    <div className="header pb-[10px] bg-black relative ">
     <div className="main flex flex-col justify-around items-center">
       <ImageBackground
         startY="-80%"
         src="/images/DAX Original.png"
         alt="..."
-        className="animate-imageShowUp w-[512px] h-[200px]"
+        className="animate-imageShowUp xl:w-[512px] xl:h-[200px] lg:w-[360px] lg:h-[150px] md:w-[260px] md:h-[110px] w-[130px] h-[55px]"
       />
-    <Video className='mb-[80px] '  src="video/DAX.mp4" />
+    <Video className='xl:mb-[50px] lg:mb-[35px] md:mb-[20px] mb-[10px]  xl:w-[67%] w-[55%]' src="video/DAX.mp4" />
 
     </div>
 
@@ -22,21 +22,21 @@ export default function header() {
         endY="-45%"
         src="/images/pray.png"
         alt="..."
-        className="animate-imageShowUp w-[200px] h-[250px] absolute top-10 left-0"
+        className="animate-imageShowUp xl:w-[200px] xl:h-[250px] lg:w-[165px] lg:h-[210px] md:w-[130px] md:h-[60px] w-[65px] h-[30px] absolute md:top-8 top-4 left-0"
       />
       <ImageBackground
         startX="-100%"
         endX="-25%"
         src="/images/mask.png"
         alt="..."
-        className="animate-imageShowUp w-[300px] h-[240px] absolute top-[155px] left-0"
+        className="animate-imageShowUp xl:w-[300px] xl:h-[240px] lg:w-[220px] lg:h-[180px] md:w-[170px] md:h-[135px] w-[85px] h-[65px] absolute xl:top-[145px] lg:top-[80px] md:top-[60px] top-[35px] left-0"
       />
       <ImageBackground
         startX="-100%"
-        endX="-20%"
+        endX="-25%"
         src="/images/candy 1.png"
         alt="..."
-        className="animate-imageShowUp w-[300px] h-[174px] absolute bottom-0 left-0"
+        className="animate-imageShowUp xl:w-[300px] xl:h-[174px] lg:w-[250px] lg:h-[140px] md:w-[180px] md:h-[100px] w-[90px] h-[50px] absolute xl:bottom-[30px] lg:bottom-[20px]  bottom-[0px] left-0"
       />
       <ImageBackground
         startX="100%"
@@ -44,14 +44,14 @@ export default function header() {
         endY="5%"
         src="/images/sun.png"
         alt="..."
-        className="animate-imageShowUp w-[306px] h-[340px] absolute top-0 right-0"
+        className="animate-imageShowUp 2xl:w-[306px] 2xl:h-[280px] xl:w-[230px] xl:h-[230px] lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[140px] w-[75px] h-[70px] absolute top-0 right-0 "
       />
       <ImageBackground
         startX="100%"
-        endX="-100%"
+        endX="-60%"
         src="/images/bubbles 1.png"
         alt="..."
-        className="animate-imageShowUp w-[170px] h-[320px] absolute bottom-0 right-0"
+        className="animate-imageShowUp 2xl:w-[170px] 2xl:h-[320px] xl:w-[120px] xl:h-[320px] lg:w-[140px] lg:h-[180px] md:w-[100px] md:h-[120px] w-[50px] h-[60px] absolute bottom-[20px] right-0"
       />
     </div>
   );
