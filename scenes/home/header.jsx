@@ -2,9 +2,9 @@ import ImageBackground from "components/image";
 import Video from "components/video";
 import React, { useMemo } from "react";
 
-export default function header() {
+export default function header(props) {
   return (
-    <div className="header snap-start xl:h-screen  pb-[10px] bg-black relative ">
+    <div className={`header ${props.className}  pb-[10px] bg-black relative `}>
     <div className="main flex flex-col justify-around items-center">
       <ImageBackground
         startY="-80%"
