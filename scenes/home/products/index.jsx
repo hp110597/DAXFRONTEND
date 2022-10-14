@@ -51,7 +51,7 @@ const PRODUCTS = [
 
 const Products = (props) => {
   const ref = useRef();
-  const onScreen = useOnScreen(ref, "0.9");
+  const onScreen = useOnScreen(ref, '0.001');
   const [indexActive, setIndexActive] = useState(0);
   const prevIndexActive = useRef(null);
   const handleOnChangeIndexActive = (index) => {
@@ -77,16 +77,13 @@ const Products = (props) => {
   }, [PRODUCTS, indexActive, prevIndexActive, props.onShowDialog]);
 
   return (
-    <div
-      ref={ref}
-      className={"h-screen bg-[#000000] relative overflow-hidden snap-start"}
-    >
-      <div className={`h-screen bg-[#000000] relative overflow-hidden snap-start ${onScreen ? "" : "hidden"}`}>
-        {productList}
-        <Pagination numberOfDot={PRODUCTS.length} className='absolute md:bottom-8 md:right-10 md:gap-x-8 bottom-44 gap-x-4 right-1/2 translate-x-1/2 md:translate-x-0 z-[6]'
-          onChangeIndexActive={handleOnChangeIndexActive}
-          dotActive={indexActive}
-        />
+    <div ref={ref} className={`h-screen bg-[#000000] relative overflow-hidden snap-start`}>
+      {productList}
+      <Pagination numberOfDot={PRODUCTS.length} className='absolute md:bottom-8 md:right-10 md:gap-x-8 bottom-44 gap-x-4 right-1/2 translate-x-1/2 md:translate-x-0 z-[6]'
+        onChangeIndexActive={handleOnChangeIndexActive}
+        dotActive={indexActive}
+      />
+      <div className={`${onScreen ? '' : 'hidden'}`}>
         <ImageBackground
           src='/images/free_form_2.png'
           alt='Free Form'
@@ -174,6 +171,7 @@ const Products = (props) => {
           alt='Star one 1'
           className={`absolute w-[32px] h-[54px] bottom-1/3 left-0`}
         />
+
       </div>
     </div>
   );
