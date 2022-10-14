@@ -1,20 +1,15 @@
 import { memo, useCallback, useMemo, useState } from "react"
 import ButtonImage from "components/image_button";
 
-const PaginateSlider = (props) => {
-  const { numberOfDot, sizeDot } = props;
-  const [activeDot, setActiveDot] = useState(0);
+const Pagination = (props) => {
+  const { numberOfDot, className, onChangeIndexActive, dotActive } = props;
 
   const dots = useMemo(() => Array(numberOfDot).fill(0), [numberOfDot]);
 
-  const onChangeIndex = useCallback((index) => {
-    setActiveDot(index);
-  }, [])
-
   const dotItems = useCallback(() => {
     return dots.map((dotItem, index) => (
-      <li key={index} onClick={onChangeIndex.bind(PaginateSlider, index)} className='cursor-pointer'>
-        <div className={`${index === activeDot ? 'hidden' : ''}`}>
+      <li key={index} onClick={onChangeIndexActive.bind(Pagination, index)} className='cursor-pointer'>
+        <div className={`${index === dotActive ? 'hidden' : ''}`}>
           <ButtonImage
             src='/images/dot.png'
             atl='Icons Close'
@@ -22,7 +17,7 @@ const PaginateSlider = (props) => {
             height={10}
           />
         </div>
-        <div className={`${index === activeDot ? 'animate-dotActiveFadein' : 'hidden'}`}>
+        <div className={`${index === dotActive ? 'animate-dotActiveFadein' : 'hidden'}`}>
           <ButtonImage
             src='/images/dot_active.png'
             atl='Icons Close'
@@ -32,12 +27,12 @@ const PaginateSlider = (props) => {
         </div>
       </li>
     ))
-  }, [activeDot, numberOfDot])
+  }, [dotActive, numberOfDot])
   return (
-    <ul className={`flex ${sizeDot.gap} items-center`}>
+    <ul className={`flex items-center ${className}`}>
       {dotItems()}
     </ul>
   )
 }
 
-export default memo(PaginateSlider)
+export default memo(Pagination)

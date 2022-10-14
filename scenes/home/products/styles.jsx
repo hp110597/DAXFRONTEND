@@ -1,6 +1,5 @@
 const styles = {
-  width: {},
-  swipe: {},
+  productInfor: {},
 }
 
 export default styles;

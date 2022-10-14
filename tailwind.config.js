@@ -23,7 +23,6 @@ module.exports = {
         },
         textAnimate: {
           '0%': {
-            opacity: '0.5',
             transform: 'translateY(var(--startPosition))'
           },
           '100%': {
@@ -32,16 +31,41 @@ module.exports = {
           }
         },
         imageFadeIn: {
-          '0%': { opacity: '0', transform: 'translateX(var(--startX)) translateY(var(--startY))' },
-          '100%': { opacity: '1', transform: 'translateX(var(--endX))  translateY(var(--endY))' },
+          '0%': { opacity: 'var(--startOpacity)', transform: 'translateX(var(--startX)) translateY(var(--startY))' },
+          '100%': { opacity: 'var(--endOpacity)', transform: 'translateX(var(--endX))  translateY(var(--endY))' },
+        },
+        textAnimateFadeOut: {
+          '0%': { opacity: '1', transform: 'translateY(var(--startPosition))' },
+          '100%': { opacity: '0', transform: 'translateY(var(--endPosition))' },
+        },
+        imageFadeOut: {
+          '0%': { opacity: '1', transform: 'translateX(var(--startX)) translateY(var(--startY))', visibility: 'visible' },
+          '100%': { opacity: '0', transform: 'translateX(var(--endX))  translateY(var(--endY))', visibility: 'hidden' }
+        },
+        fadeIn: {
+          '0%': { transform: 'translateX(50%)', opacity: '0.5' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        fadeOut: {
+          '0%': { visibility: 'visible' },
+          '100%': { visibility: 'hidden' },
+        },
+        process: {
+          '0%': { width: '0px' },
+          '100%': { width: '100%' },
         }
       },
       animation: {
         dialogFadeIN: 'dialogFadeIN 1s ease',
         dotActiveFadein: 'dotActiveFadein 1s ease',
         textScroll: 'scroll 10s linear',
-        textAnimate: 'textAnimate var(--duration) ease-in',
-        imageFadeIn: 'imageFadeIn 3s forwards'
+        textAnimate: 'textAnimate var(--duration) ease-in-out var(--delay) forwards',
+        imageFadeIn: 'imageFadeIn var(--duration) ease-in-out var(--delay) forwards',
+        textAnimateFadeOut: 'textAnimateFadeOut var(--duration) ease-in-out var(--delay) forwards',
+        imageFadeOut: 'imageFadeOut var(--duration) ease-in-out var(--delay) forwards',
+        fadeIn: 'fadeIn 0.7s ease-in-out',
+        fadeOut: 'fadeOut .7s ease-in-out',
+        process: 'process 3s ease-in-out forwards'
       },
       fontFamily: {
         sans: 'Averta,sans-serif',

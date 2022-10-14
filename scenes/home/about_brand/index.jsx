@@ -1,12 +1,14 @@
-import { useState, useRef, useEffect, useMemo, memo } from "react"
-import styles from './styles'
-import ImageTest from "components/image_test"
+import { useState, useRef, useEffect, useMemo, memo, useCallback } from "react";
+import styles from './styles';
+import StoryBrand from './story_brand';
+import VisionMission from './vision_mission';
+import ImageBackground from "components/image";
 
 const AboutBrand = () => {
-  const [width, setWidth] = useState(40);
+  const [width, setWidth] = useState(0);
   const [isSwipe, setIsSwipe] = useState(false);
   const coordinateX = useRef();
-  const handleOnMouseMove = (e) => {
+  const handleOnMouseMove = useCallback((e) => {
     const rect = coordinateX.current.getBoundingClientRect();
     if (e.type === 'mousemove') {
       const widthPageOne = e.clientX - rect.left;
@@ -16,7 +18,7 @@ const AboutBrand = () => {
       const widthPageOne = e.touches[0].pageX - rect.left;
       setWidth(widthPageOne);
     }
-  }
+  }, [])
   const stylePC = useMemo(() => {
     return { ...styles.widthPageOnePC, width: width };
   }, [width])
@@ -34,131 +36,26 @@ const AboutBrand = () => {
 
     if (window.mobileAndTabletCheck()) {
       setIsSwipe(true);
+      setWidth(10);
     }
   }, []);
   const SHOW_SWIPE = useMemo(() => {
     if (isSwipe)
-      return <div className="absolute top-1/2 -translate-x-2/4 -translate-y-2/4 z-30" style={styleMobile}>KÉO</div>;
+      return <ImageBackground
+        src='/images/swipe_icon.png'
+        alt="Icon swipe"
+        className="absolute w-[50px] h-[50px] top-1/2 z-30"
+        endX='-50%'
+        endY='-50%'
+        duration='1s'
+        LeftStyle={styleMobile}
+      />
   }, [isSwipe, width])
 
   return (
-    <div className="h-[600px] relative" ref={coordinateX} onMouseMove={handleOnMouseMove} onTouchMove={handleOnMouseMove}>
-      {/* Begin part 1 */}
-      <div className="h-full bg-[#1E1E1E] absolute top-0 left-0 overflow-hidden z-20" style={stylePC}>
-        <div className="w-screen relative">
-          <div className="grid grid-cols-[600px_auto] xl:container gap-y-[80px] mt-[45px]">
-            {/*item-grid-1 */}
-            <div className="flex items-center justify-center gap-x-6">
-              <ImageTest className={`w-[200px] h-[100px]`} src='/images/Dax_Original.png' alt='Logo Brand' />
-              <h1 className="font-avertaBold text-[48px] text-[#FDF8E2]">FOR US</h1>
-            </div>
-            {/*item-grid-2 */}
-            <div className="col-start-1 col-end-2">
-              <ImageTest className={`w-[600px] h-[125px]`} src='/images/bunch_1.png' alt='Decorate Picture' />
-            </div>
-            {/*item-grid-3*/}
-            <div className="text-[36px] font-avertaBold text-[#FDF8E2] flex flex-col justify-between items-end [word-spacing:5px] [line-height:60px] tracking-widest">
-              <p>Everything will be digital.</p>
-              <p>Even the things that won&apos;t.</p>
-            </div>
-          </div>
-          <div className="font-avertaBold xl:text-base [line-height:30px] xl:container mt-10 tracking-wide text-right text-white flex justify-end">
-            <p className="w-8/12">This is long story about dax, This is long story about dax, This is long story about dax, This is long story about dax, This is long story about dax, This is long story about dax, This is long story about dax, This is long story about dax, This is long story about dax, This is long story about dax.</p>
-          </div>
-          <div className="absolute top-[60px] left-[570px] -z-1">
-            <ImageTest className={`w-[32px] h-[54px]`} src='/images/star_one_1.png' alt='Star One 1' />
-          </div>
-          <div className="absolute top-[60px] left-[80px] -z-1">
-            <ImageTest className={`w-[300px] h-[175px] opacity-50`} src='/images/candy_1.png' alt='Candy 1' />
-          </div>
-          <div className="absolute top-[80px] right-[326px] -z-1">
-            <ImageTest className={`w-[32px] h-[32px]`} src='/images/logo_blue.png' alt='Logo Blue' />
-          </div>
-          <div className="absolute top-[-45px] right-[58px] -z-1">
-            <ImageTest className={`w-[100px] h-[91px]`} src='/images/lamp.png' alt='Lamp' />
-          </div>
-          <div className="absolute top-[10px] right-[8px] -z-1">
-            <ImageTest className={`w-[50px] h-[93px]`} src='/images/star_1.png' alt='star 1' />
-          </div>
-          <div className="absolute top-[235px] right-[139px] -z-1">
-            <ImageTest className={`w-[25px] h-[25px]`} src='/images/coin_3.png' alt='coin 3' />
-          </div>
-          <div className="absolute top-[448px] left-[114px] -z-1">
-            <ImageTest className={`w-[32px] h-[32px]`} src='/images/logo_light.png' alt='Logo Light' />
-          </div>
-          <div className="absolute bottom-[-125px] left-[58px] -z-1">
-            <ImageTest className={`w-[32px] h-[32px]`} src='/images/logo_blue.png' alt='Logo Blue' />
-          </div>
-          <div className="absolute bottom-[-90px] left-[842px] -z-1">
-            <ImageTest className={`w-[40px] h-[40px]`} src='/images/coin_2.png' alt='Coin 2' />
-          </div>
-          <div className="absolute bottom-[-135px] right-[-30px] -z-1">
-            <ImageTest className={`w-[100px] h-[108px]`} src='/images/pumpkin_1.png' alt='Pumbkin' />
-          </div>
-        </div>
-      </div>
-      {/* End part 1 */}
-
-      {/* Begin part 2 */}
-      <div className={`h-full w-screen bg-[#1E1E1E] absolute top-0 right-0 z-10 overflow-hidden`}>
-        <div className="grid grid-cols-[600px_auto] xl:container gap-y-[80px] mt-[45px]">
-          {/*item-grid-1 */}
-          <div className="flex items-center justify-center gap-x-6">
-            <ImageTest className={`w-[200px] h-[100px]`} src='/images/Dax_Original.png' alt='Logo Brand' />
-            <h1 className="font-avertaBold text-[48px] text-[#FDF8E2]">FOR US</h1>
-          </div>
-          {/*item-grid-2 */}
-          <div className="col-start-1 col-end-2 text-white">
-            <h1 className="font-avertaBold ml-10 text-[40px]">Vision</h1>
-            <p className="text-center ml-2 text-xl [line-height:35px]">This is dax mission, This is dax mission, This is dax mission, This is dax mission, This is dax mission, This is dax mission.</p>
-          </div>
-        </div>
-        <div className="mt-16 flex justify-end">
-          <div className="w-1/2 text-white flex flex-col items-end">
-            <h1 className="font-avertaBold text-[40px] mr-16">Mission</h1>
-            <p className="text-right mr-10 text-xl [line-height:35px] mt-5">This is dax mission, This is dax mission, This is dax mission, This is dax mission, This is dax mission, This is dax mission.</p>
-          </div>
-        </div>
-
-        <div className="absolute top-[105px] left-[80px] -z-1">
-          <ImageTest className={`w-[300px] h-[175px] opacity-50`} src='/images/candy_1.png' alt='candy 1' />
-        </div>
-        <div className="absolute top-[13px] right-[28px] -z-1">
-          <ImageTest className={`w-[600px] h-[125px]`} src='/images/bunch_1.png' alt='bunch 1' />
-        </div>
-        <div className="absolute top-[105px] left-[570px] -z-1">
-          <ImageTest className={`w-[32px] h-[54px]`} src='/images/star_one_1.png' alt='star 1' />
-        </div>
-        <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -z-1">
-          <ImageTest className={`w-[100px] h-[91px]`} src='/images/lamp.png' alt='lamp' />
-        </div>
-        <div className="absolute top-1/2 left-1/2 translate-x-[200%] -z-1">
-          <ImageTest className={`w-[50px] h-[93px]`} src='/images/star_1.png' alt='star 1' />
-        </div>
-        <div className="absolute top-[365px] right-[340px] -z-1">
-          <ImageTest className={`w-[32px] h-[32px]`} src='/images/logo_blue.png' alt='logo blue' />
-        </div>
-        <div className="absolute top-[280px] right-[140px] -z-1">
-          <ImageTest className={`w-[24px] h-[24px]`} src='/images/coin_3.png' alt='coin 3' />
-        </div>
-        <div className="absolute top-1/2 -translate-y-1/2 right-[-100px] -z-1">
-          <ImageTest className={`w-[300px] h-[350px] opacity-50`} src='/images/pray.png' alt='pray' />
-        </div>
-        <div className="absolute -bottom-[10px] -left-[15px] -z-1">
-          <ImageTest className={`w-[300px] h-[240px]`} src='/images/mask.png' alt='mask' />
-        </div>
-        <div className="absolute bottom-[140px] left-[410px] -z-1">
-          <ImageTest className={`w-[32px] h-[32px]`} src='/images/logo_light.png' alt='logo light' />
-        </div>
-        <div className="absolute -bottom-[0] left-[500px] -z-1">
-          <ImageTest className={`w-[100px] h-[108px]`} src='/images/pumpkin_2.png' alt='pumpkin 2' />
-        </div>
-        <div className="absolute bottom-[40px] left-[842px] -z-1">
-          <ImageTest className={`w-[40px] h-[40px]`} src='/images/coin_2.png' alt='coin_2' />
-        </div>
-      </div>
-      {/* End part 2 */}
-      {/* SHOW_SWIPE */}
+    <div className="h-[80%] relative overflow-hidden" ref={coordinateX} onMouseMove={handleOnMouseMove} onTouchMove={handleOnMouseMove}>
+      <StoryBrand stylePC={stylePC} />
+      <VisionMission />
       {SHOW_SWIPE}
     </div>
   )
