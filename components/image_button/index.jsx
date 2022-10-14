@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import React, { memo, useMemo } from 'react';
-import styles from './styles';
 
 const ButtonImage = (props) => {
-  const buttonSize = { ...styles.size, width: props.width, height: props.height };
+  const buttonSize = { width: props.width, height: props.height };
   return (
     <a
       href={props.href} target="_blank" rel="noreferrer"

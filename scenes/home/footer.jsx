@@ -6,7 +6,7 @@ import ImageBackground from 'components/image'
 
 const Footer = () => {
     return (
-        <div className='relative bg-black w-full h-[250px] flex flex-col'>
+        <div className='relative bg-black w-full h-[20%] flex flex-col'>
             <div className='basis-2/3 mt-[10px] flex flex-row'>
                 <div className='basis-1/2 sm:pl-[30px] pl-[20px] pt-[43px]'>
                     <PrimaryButton text={'Get in touch'}

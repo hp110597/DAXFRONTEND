@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect, useMemo, memo, useCallback } from "react";
-import styles from './styles';
 import StoryBrand from './story_brand';
 import VisionMission from './vision_mission';
 import ImageBackground from "components/image";
@@ -20,11 +19,11 @@ const AboutBrand = () => {
     }
   }, [])
   const stylePC = useMemo(() => {
-    return { ...styles.widthPageOnePC, width: width };
+    return { width: width };
   }, [width])
 
   const styleMobile = useMemo(() => {
-    return { ...styles.widthPageOneMobile, left: width };
+    return { left: width };
   }, [width])
 
   useEffect(() => {
@@ -42,7 +41,7 @@ const AboutBrand = () => {
   const SHOW_SWIPE = useMemo(() => {
     if (isSwipe)
       return <ImageBackground
-        src='/images/swipe_icon.png'
+        src='/images/split.png'
         alt="Icon swipe"
         className="absolute w-[50px] h-[50px] top-1/2 z-30"
         endX='-50%'

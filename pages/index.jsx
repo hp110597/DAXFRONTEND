@@ -25,10 +25,10 @@ export default function Home() {
   }, [showStatusOrder]);
 
   //HandleShowOrderStatus
-  const handleShowOrderStatus = (isSuccess) => {
+  const handleShowOrderStatus = useCallback((isSuccess) => {
     const NewShowStatusOrder = { ...showStatusOrder, isShow: true, isSuccess: isSuccess }
     setShowStatusOrder(NewShowStatusOrder)
-  }
+  }, [])
   //HandleShowDialog
   const handleShowDialog = useCallback((id) => {
     setIdProduct(id);

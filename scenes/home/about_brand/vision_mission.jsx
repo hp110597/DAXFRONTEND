@@ -3,7 +3,7 @@ import ImageBackground from "components/image";
 import Text from "components/text";
 const VisionMission = () => {
   return (
-    <div className={`h-full w-screen bg-[#1E1E1E] absolute top-0 right-0 z-10 overflow-hidden`}>
+    <div className={`h-full w-screen bg-[#000000] absolute top-0 right-0 z-10 overflow-hidden`}>
       <div className="md:grid md:grid-cols-[600px_auto] xl:container xl:gap-y-[50px] md:gap-y-[40px] mt-[45px]">
         {/*item-grid-1 */}
         <div className="flex items-center justify-center gap-x-6">

@@ -4,7 +4,7 @@ import Text from "components/text";
 
 const StoryBrand = (props) => {
   return (
-    <div className="h-full bg-[#1E1E1E] absolute top-0 left-0 overflow-hidden z-20" style={props.stylePC}>
+    <div className="h-full bg-[#000000] absolute top-0 left-0 overflow-hidden z-20" style={props.stylePC}>
       <div className="w-screen h-full relative">
         <div className="md:grid md:grid-cols-[600px_auto] xl:container lg:gap-y-[40px] md:gap-y-[60px] mt-[45px]">
           {/*item-grid-1 */}
