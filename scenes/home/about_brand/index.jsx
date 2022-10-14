@@ -53,7 +53,7 @@ const AboutBrand = () => {
   }, [isSwipe, width])
 
   return (
-    <div className="h-[80%] relative overflow-hidden" ref={coordinateX} onMouseMove={handleOnMouseMove} onTouchMove={handleOnMouseMove}>
+    <div className="h-[80%] relative overflow-hidden snap-start" ref={coordinateX} onMouseMove={handleOnMouseMove} onTouchMove={handleOnMouseMove}>
       <StoryBrand stylePC={stylePC} />
       <VisionMission />
       {SHOW_SWIPE}
