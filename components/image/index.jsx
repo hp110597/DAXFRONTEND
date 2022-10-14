@@ -2,7 +2,7 @@ import Image from "next/image";
 import React, { memo, useCallback, useMemo } from "react";
 
 const ImageBackground = (props) => {
-  const { startX, endX, startY, endY, startOpacity, endOpacity, duration, delay, onClickBtn } = props;
+  const { startX, endX, startY, endY, startOpacity, endOpacity, duration, delay, onClickBtn, LeftStyle } = props;
   const handleOnClick = () => {
     if (!onClickBtn) return;
     onClickBtn();
@@ -54,7 +54,7 @@ const ImageBackground = (props) => {
   }, [startX, endX, startY, endY, startOpacity, endOpacity, duration, delay]);
 
   return (
-    <div className={`animate-imageFadeIn inline-block ${props.className}`} style={STYLE} onClick={handleOnClick}>
+    <div className={`animate-imageFadeIn inline-block ${props.className}`} style={{ ...STYLE, ...LeftStyle }} onClick={handleOnClick}>
       <Image
         src={props.src}
         alt={props.alt}

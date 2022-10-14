@@ -5,16 +5,16 @@ import React, { useMemo } from "react";
 export default function header(props) {
   return (
     <div className={`header ${props.className}  pb-[10px] bg-black relative `}>
-    <div className="main flex flex-col justify-around items-center">
-      <ImageBackground
-        startY="-80%"
-        src="/images/DAX Original.png"
-        alt="..."
-        className="animate-imageShowUp xl:mb-[70px] xl:w-[512px] xl:h-[200px] lg:w-[360px] lg:h-[150px] md:w-[260px] md:h-[110px] w-[130px] h-[55px]"
-      />
-    <Video className=' lg:mb-[35px] md:mb-[20px] mb-[10px] ' src="video/DAX.mp4" />
+      <div className="main flex flex-col justify-around items-center">
+        <ImageBackground
+          startY="-80%"
+          src="/images/DAX Original.png"
+          alt="..."
+          className="animate-imageShowUp xl:mb-[70px] xl:w-[512px] xl:h-[200px] lg:w-[360px] lg:h-[150px] md:w-[260px] md:h-[110px] w-[130px] h-[55px]"
+        />
+        <Video className=' lg:mb-[35px] md:mb-[20px] mb-[10px] ' src="video/DAX.mp4" />
 
-    </div>
+      </div>
 
       <ImageBackground
         startX="-100%"
@@ -49,7 +49,7 @@ export default function header(props) {
       <ImageBackground
         startX="100%"
         endX="-100%"
-        src="/images/bubbles 1.png"
+        src="/images/bubbles_1.png"
         alt="..."
         className="animate-imageShowUp 2xl:w-[170px] 2xl:h-[320px] xl:w-[120px] xl:h-[320px] lg:w-[140px] lg:h-[180px] md:w-[100px] md:h-[120px] w-[10px] h-[60px] absolute xl:bottom-[100px] bottom-[20px] right-0 "
       />
