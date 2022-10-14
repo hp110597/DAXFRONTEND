@@ -4,7 +4,9 @@ import React, { useMemo } from "react";
 
 export default function header(props) {
   return (
-    <div className={`header ${props.className}  pb-[10px] bg-black relative `}>
+    <div
+      className={`header ${props.className}  pb-[10px] bg-black relative snap-start h-screen`}
+    >
       <div className="main flex flex-col justify-around items-center">
         <ImageBackground
           startY="-80%"
@@ -12,8 +14,10 @@ export default function header(props) {
           alt="..."
           className="animate-imageShowUp xl:mb-[70px] xl:w-[512px] xl:h-[200px] lg:w-[360px] lg:h-[150px] md:w-[260px] md:h-[110px] w-[130px] h-[55px]"
         />
-        <Video className=' lg:mb-[35px] md:mb-[20px] mb-[10px] ' src="video/DAX.mp4" />
-
+        <Video
+          className=" lg:mb-[35px] md:mb-[20px] mb-[10px] "
+          src="video/DAX.mp4"
+        />
       </div>
 
       <ImageBackground
