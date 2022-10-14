@@ -9,7 +9,7 @@ const AboutArtist = () => {
     return (
         <div
             ref={ref}
-            className={`-z-20 relative flex w-full h-[100vh] bg-black`}>
+            className={`-z-20 relative flex w-full h-[100vh] bg-black snap-start`}>
             <div className={`relative z-10 flex-col w-full h-[545px] justify-items-center ${onScreen ? "" : 'hidden'}`}>
                 <ImageBackground
                     startY='20%'
