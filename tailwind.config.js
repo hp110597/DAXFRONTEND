@@ -20,6 +20,9 @@ module.exports = {
         scroll: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(var(--percentage))' },
+        imageShowUp:{
+          '0%': {  opacity: '0',transform:'translateX(var(--startX)) translateY(var(--startY))' },
+          '100%': {  opacity: '1',transform:'translateX(var(--endX))  translateY(var(--endY))' },
         },
         textAnimate: {
           '0%': {
@@ -42,6 +45,10 @@ module.exports = {
         textScroll: 'scroll 10s linear',
         textAnimate: 'textAnimate var(--duration) ease-in-out var(--delay) forwards',
         imageFadeIn: 'imageFadeIn var(--duration) ease-in-out var(--delay) forwards',
+        imageShowUp:'imageShowUp 3s forwards',
+        textAnimate: 'textAnimate var(--duration) ease-in',
+
+
       },
       fontFamily: {
         sans: 'Averta,sans-serif',
@@ -56,6 +63,10 @@ module.exports = {
         '1': '1',
       },
     },
-  },
-  plugins: [],
+      colors: {
+        'primary': '#86CFF2'
+      }
+    },
+    plugins: [],
+  }
 }
