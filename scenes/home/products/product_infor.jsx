@@ -8,7 +8,7 @@ const ProductInfor = ({ infor, prevProductActive }) => {
       return <Text key={index}
         animateStart={`${prevProductActive ? '0%' : '1000%'}`}
         animateEnd={`${prevProductActive ? '-1000%' : '0%'}`}
-        className={`xl:text-[22px] md:text-[16px] text-[10px] text-justify [line-height:40px] opacity-0 ${prevProductActive ? 'animate-textAnimateFadeOut' : ''}`}
+        className={`3xl:text-[30px] 2xl:text-[26px] xl:text-[22px] md:text-[16px] text-[10px] text-justify [line-height:40px] 2xl:[line-height:50px] opacity-0 ${prevProductActive ? 'animate-textAnimateFadeOut' : ''}`}
         text={item}
         duration='1.2s'
         delay={(index / 10) + 's'} />
