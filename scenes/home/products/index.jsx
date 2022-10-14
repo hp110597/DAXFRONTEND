@@ -44,7 +44,7 @@ const Products = (props) => {
 
 
   return (
-    <div className="h-screen bg-[#1E1E1E] relative overflow-hidden">
+    <div className="h-screen bg-[#000000] relative overflow-hidden">
       {productList}
       <Pagination numberOfDot={PRODUCTS.length} className='absolute md:bottom-8 md:right-10 md:gap-x-8 bottom-44 gap-x-4 right-1/2 translate-x-1/2 md:translate-x-0 z-[6]'
         onChangeIndexActive={handleOnChangeIndexActive}

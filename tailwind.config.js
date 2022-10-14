@@ -21,8 +21,13 @@ module.exports = {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(var(--percentage))' },
         },
+        imageShowUp: {
+          '0%': { opacity: '0', transform: 'translateX(var(--startX)) translateY(var(--startY))' },
+          '100%': { opacity: '1', transform: 'translateX(var(--endX))  translateY(var(--endY))' },
+        },
         textAnimate: {
           '0%': {
+            opacity: '0.5',
             transform: 'translateY(var(--startPosition))'
           },
           '100%': {
@@ -65,7 +70,8 @@ module.exports = {
         imageFadeOut: 'imageFadeOut var(--duration) ease-in-out var(--delay) forwards',
         fadeIn: 'fadeIn 0.7s ease-in-out',
         fadeOut: 'fadeOut .7s ease-in-out',
-        process: 'process 3s ease-in-out forwards'
+        process: 'process 3s ease-in-out forwards',
+        imageShowUp: 'imageShowUp 3s forwards',
       },
       fontFamily: {
         sans: 'Averta,sans-serif',
