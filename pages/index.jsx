@@ -7,44 +7,58 @@ import AboutBrand from "scenes/home/about_brand";
 import Header from "scenes/home/header";
 import Products from "scenes/home/products";
 import AboutArtist from "scenes/home/AboutArtist";
-import styles from "styles/Home.module.css"
-
+import styles from "styles/Home.module.css";
 
 export default function Home() {
   const [showDialog, setShowDialog] = useState(false);
-  const [idProduct, setIdProduct] = useState(0)
-  const [showStatusOrder, setShowStatusOrder] = useState({ isShow: false, isSuccess: true });
+  const [idProduct, setIdProduct] = useState(0);
+  const [showStatusOrder, setShowStatusOrder] = useState({
+    isShow: false,
+    isSuccess: true,
+  });
 
   useEffect(() => {
     if (showStatusOrder.isShow) {
-      const NewShowStatusOrder = { ...showStatusOrder, isShow: false }
+      const NewShowStatusOrder = { ...showStatusOrder, isShow: false };
       setTimeout(() => {
         setShowStatusOrder(NewShowStatusOrder);
-      }, 3000)
+      }, 3000);
     }
   }, [showStatusOrder]);
 
   //HandleShowOrderStatus
   const handleShowOrderStatus = useCallback((isSuccess) => {
-    const NewShowStatusOrder = { ...showStatusOrder, isShow: true, isSuccess: isSuccess }
-    setShowStatusOrder(NewShowStatusOrder)
-  }, [])
+    const NewShowStatusOrder = {
+      ...showStatusOrder,
+      isShow: true,
+      isSuccess: isSuccess,
+    };
+    setShowStatusOrder(NewShowStatusOrder);
+  }, []);
   //HandleShowDialog
-  const handleShowDialog = useCallback((id) => {
-    setIdProduct(id);
-    setShowDialog(!showDialog);
-  }, [showDialog])
-
+  const handleShowDialog = useCallback(
+    (id) => {
+      setIdProduct(id);
+      setShowDialog(!showDialog);
+    },
+    [showDialog]
+  );
 
   const ORDER_DIALOG = useMemo(() => {
     if (showDialog)
-      return <OrderDialog closeDiaLog={handleShowDialog} handleShowOrderStatus={handleShowOrderStatus} idProduct={idProduct} />;
-  }, [showDialog])
+      return (
+        <OrderDialog
+          closeDiaLog={handleShowDialog}
+          handleShowOrderStatus={handleShowOrderStatus}
+          idProduct={idProduct}
+        />
+      );
+  }, [showDialog]);
 
   const ORDER_STATUS = useMemo(() => {
     if (showStatusOrder.isShow)
       return <OrderStatus isSuccess={showStatusOrder.isSuccess} />;
-  }, [showStatusOrder.isShow])
+  }, [showStatusOrder.isShow]);
 
   return (
     <div className={`containerApp ${styles.containerApp}`}>
