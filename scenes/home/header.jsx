@@ -12,8 +12,10 @@ export default function header(props) {
           alt="..."
           className="animate-imageShowUp xl:mb-[70px] lg:mb-[60px] md:mb-[30px] xl:w-[512px] xl:h-[200px] lg:w-[460px] lg:h-[200px] md:w-[450px] md:h-[210px] w-[330px] h-[255px]"
         />
-        <Video className=' lg:mb-[35px] md:mb-[20px] mb-[10px] ' src="video/DAX.mp4" />
-
+        <Video
+          className=" lg:mb-[35px] md:mb-[20px] mb-[10px] "
+          src="video/DAX.mp4"
+        />
       </div>
 
       <ImageBackground
