@@ -1,5 +1,14 @@
 {
   "compilerOptions": {
-    "baseUrl": "."
-  }
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["./components/*"],
+      "pages/*": ["./pages/*"],
+      "scenes/*": ["./scenes/*"],
+      "hooks/*": ["./hooks/*"],
+      "styles/*": ["./styles/*"],
+      "utils/*": ["./utils/*"]
+    }
+  },
+  "include": ["."]
 }
