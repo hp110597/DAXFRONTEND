@@ -3,6 +3,7 @@ import { useCallback, useMemo, useState } from "react";
 import Footer from "scenes/home/Footer";
 import OrderDialog from "scenes/home/order_dialog";
 import Header from "scenes/home/header";
+import AboutArtist from "scenes/home/AboutArtist";
 
 export default function Home() {
   const [showDialog, setShowDialog] = useState(false);
@@ -24,6 +25,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <AboutArtist />
+      <Footer />
 
 
       <div className="flex justify-center items-center">
