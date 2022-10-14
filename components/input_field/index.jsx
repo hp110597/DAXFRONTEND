@@ -6,7 +6,7 @@ const InputField = (props) => {
   }, [])
   return (
     <>
-      <label htmlFor={props.id} className="font-avertaBold text-sm">{props.label}</label>
+      <label htmlFor={props.id} className="font-avertaBold text-sm tracking-widest">{props.label}</label>
       <input id={props.id} type='text' name={props.name} className='block w-full h-12 box-border p-5 border border-gray-200 outline-0 rounded-xl text-sm focus:border-sky-500 mt-2 text-gray-500'
         value={props.value}
         onChange={handleOnChange}

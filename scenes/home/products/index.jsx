@@ -53,28 +53,28 @@ const Products = (props) => {
       <ImageBackground
         src='/images/free_form_2.png'
         alt='Free Form'
-        className={`absolute xl:w-[500px] xl:h-[434px] lg:w-[400px] lg:h-[360px] md:w-[500px] md:h-[434px] w-[300px] h-[260px] top-0 left-0`}
+        className={`absolute 3xl:w-[650px] 3xl:[h-600px] 2xl:w-[550px] 2xl:h-[500px] xl:w-[500px] xl:h-[434px] lg:w-[400px] lg:h-[360px] md:w-[500px] md:h-[434px] w-[300px] h-[260px] top-0 left-0`}
         endY='-15%'
         endX='-10%'
       />
       <ImageBackground
         src='/images/coin_3.png'
         alt='coin_3'
-        className={`absolute w-[48px] h-[48px] md:top-[60px] md:left-[50px] top-[80px]`}
+        className={`absolute w-[48px] h-[48px] md:top-[60px] md:left-[50px] top-[80px] 2xl:top-[130px]`}
         endY='-15%'
         endX='-10%'
       />
       <ImageBackground
         src='/images/logo_blue.png'
         alt='logo blue'
-        className={`absolute w-[32px] h-[32px] xl:top-[30px] xl:left-[250px] lg:top-[80px] lg:left-[200px] md:top-[30px] md:left-[250px] top-1/4 left-1/2`}
+        className={`absolute w-[32px] h-[32px] xl:top-[30px] xl:left-[250px] lg:top-[80px] lg:left-[200px] md:top-[30px] md:left-[250px] top-1/4 left-1/2 2xl:top-[100px]`}
         endY='-15%'
         endX='-10%'
       />
       <ImageBackground
         src='/images/x_image.png'
         alt='X image'
-        className={`absolute md:w-[600px] md:h-[600px] w-[450px] h-[450px] top-1/2 left-1/2`}
+        className={`absolute md:w-[600px] md:h-[600px] w-[450px] h-[450px] 3xl:w-[900px] 3xl:h-[900px] 2xl:w-[800px] 2xl:h-[800px] top-1/2 left-1/2`}
         startY='-50%'
         startX='-50%'
         endY='-50%'
@@ -97,7 +97,7 @@ const Products = (props) => {
       <ImageBackground
         src='/images/branch.png'
         alt='branch'
-        className={`absolute md:w-[320px] md:h-[305px] top-10 -right-14 w-[260px] h-[240px]`}
+        className={`absolute md:w-[320px] md:h-[305px] top-10 -right-14 w-[260px] h-[240px] 2xl:w-[400px] 2xl:h-[380px]`}
         startX='50%'
         startY='-50%'
         duration='2s'

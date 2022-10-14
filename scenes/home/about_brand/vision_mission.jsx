@@ -27,21 +27,21 @@ const VisionMission = () => {
             animateStart='50%'
             animateEnd='0%'
             delay='0.5s'
-            className='font-avertaBold md:ml-10 ml-5 md:text-[40px] text-[30px] opacity-0'
+            className='font-avertaBold md:ml-20 ml-5 md:text-[40px] text-[30px] opacity-0'
             text='Vision'
           />
           <Text
             animateStart='50%'
             animateEnd='0%'
             delay='0.8s'
-            className='md:text-center ml-5 md:text-xl text-xs [line-height:35px] opacity-0'
+            className='md:text-center ml-10 md:text-[19px] text-xs [line-height:35px] opacity-0'
             text='This is dax mission, This is dax mission, This is dax mission, This'
           />
           <Text
             animateStart='50%'
             animateEnd='0%'
             delay='1.1s'
-            className='md:text-center ml-5 md:text-xl text-xs [line-height:35px] opacity-0'
+            className='md:text-center ml-10 md:text-xl text-xs [line-height:35px] opacity-0'
             text='is dax mission, This is dax mission, This is dax mission.'
           />
 

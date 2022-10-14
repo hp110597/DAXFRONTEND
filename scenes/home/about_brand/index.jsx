@@ -38,24 +38,20 @@ const AboutBrand = () => {
       setWidth(10);
     }
   }, []);
-  const SHOW_SWIPE = useMemo(() => {
-    if (isSwipe)
-      return <ImageBackground
+  return (
+    <div className="h-[80%] relative overflow-hidden snap-start" ref={coordinateX} onMouseMove={handleOnMouseMove} onTouchMove={handleOnMouseMove}>
+      <StoryBrand stylePC={stylePC} />
+      <VisionMission />
+      <ImageBackground
         src='/images/split.png'
         alt="Icon swipe"
-        className="absolute w-[50px] h-[50px] top-1/2 z-30"
+        className="absolute w-[30px] h-[30px] top-1/2 z-30"
         endX='-50%'
         endY='-50%'
         duration='1s'
         LeftStyle={styleMobile}
       />
-  }, [isSwipe, width])
-
-  return (
-    <div className="h-[80%] relative overflow-hidden snap-start" ref={coordinateX} onMouseMove={handleOnMouseMove} onTouchMove={handleOnMouseMove}>
-      <StoryBrand stylePC={stylePC} />
-      <VisionMission />
-      {SHOW_SWIPE}
+      <div className="h-full w-[1px] left-1/2 -translate-x-1/2 absolute z-30 bg-white" style={styleMobile}></div>
     </div>
   )
 }

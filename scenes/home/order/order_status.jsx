@@ -9,7 +9,7 @@ const OrderStatus = (props) => {
     return <><h1>FAIL</h1><p>Đặt hàng thất bại !!</p></>
   }, [isSuccess])
   return (
-    <div className={`inline-block border ${isSuccess ? 'border-green-500' : 'border-red-500'} rounded-md overflow-hidden absolute top-[20px] right-[50px] ${isSuccess ? 'text-green-500' : 'text-red-500'} bg-white z-30`}>
+    <div className={`inline-block border ${isSuccess ? 'border-green-500' : 'border-red-500'} rounded-md overflow-hidden fixed top-[20px] right-[50px] ${isSuccess ? 'text-green-500' : 'text-red-500'} bg-white z-30`}>
       <div className='pt-2 pb-4 pl-10 pr-20'>
         {MESSAGE}
       </div>
