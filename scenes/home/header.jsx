@@ -22,7 +22,7 @@ export default function header(props) {
         endY="-45%"
         src="/images/pray.png"
         alt="..."
-        className="animate-imageShowUp w-[200px] h-[250px] absolute top-10 left-0"
+        className="animate-imageShowUp xl:w-[200px] xl:h-[250px] lg:w-[165px] lg:h-[210px] md:w-[130px] md:h-[60px] w-[65px] h-[30px] absolute md:top-8 top-4 left-0"
       />
       <ImageBackground
         startX="-100%"
