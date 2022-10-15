@@ -17,7 +17,7 @@ const nextConfig = {
     config.resolve.alias["styles"] = path.join(__dirname, "./styles");
     config.resolve.alias["utils"] = path.join(__dirname, "./utils");
 
-    console.log(`ALIASES $${config.resolve.alias}`);
+    console.log(`ALIASES ${JSON.stringify(config.resolve.alias)}`);
 
     return config;
   },
