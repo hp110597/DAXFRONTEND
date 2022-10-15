@@ -17,6 +17,10 @@ const nextConfig = {
 
     return config;
   },
+  webpackFinal: async (config, { configType }) => {
+    config.resolve.modules.push(__dirname);
+    return config;
+  },
 };
 
 module.exports = nextConfig;
