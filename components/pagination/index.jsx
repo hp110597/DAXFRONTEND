@@ -1,4 +1,4 @@
-import { memo, useCallback, useMemo, useState } from "react"
+import { memo, useCallback, useMemo, useState } from "react";
 import ButtonImage from "components/image_button";
 
 const Pagination = (props) => {
@@ -8,31 +8,35 @@ const Pagination = (props) => {
 
   const dotItems = useCallback(() => {
     return dots.map((dotItem, index) => (
-      <li key={index} onClick={onChangeIndexActive.bind(Pagination, index)} className='cursor-pointer'>
-        <div className={`${index === dotActive ? 'hidden' : ''}`}>
+      <li
+        key={index}
+        onClick={onChangeIndexActive.bind(Pagination, index)}
+        className="cursor-pointer"
+      >
+        <div className={`${index === dotActive ? "hidden" : ""}`}>
           <ButtonImage
-            src='/images/dot.png'
-            atl='Icons Close'
+            src="/images/dot.png"
+            atl="Icons Close"
             width={40}
             height={10}
           />
         </div>
-        <div className={`${index === dotActive ? 'animate-dotActiveFadein' : 'hidden'}`}>
+        <div
+          className={`${
+            index === dotActive ? "animate-dotActiveFadein" : "hidden"
+          }`}
+        >
           <ButtonImage
-            src='/images/dot_active.png'
-            atl='Icons Close'
+            src="/images/dot_active.png"
+            atl="Icons Close"
             width={40}
             height={40}
           />
         </div>
       </li>
-    ))
-  }, [dotActive, numberOfDot])
-  return (
-    <ul className={`flex items-center ${className}`}>
-      {dotItems()}
-    </ul>
-  )
-}
+    ));
+  }, [dotActive, numberOfDot]);
+  return <ul className={`flex items-center ${className}`}>{dotItems()}</ul>;
+};
 
-export default memo(Pagination)
+export default memo(Pagination);
