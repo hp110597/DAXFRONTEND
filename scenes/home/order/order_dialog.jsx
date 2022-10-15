@@ -144,7 +144,10 @@ const OrderDialog = ({ closeDiaLog, handleShowOrderStatus, idProduct }) => {
   return (
     <div className="fixed inset-0 bg-gray-700 bg-opacity-50 flex justify-center items-center z-[1000]">
       <div className="bg-bgPrimary text-white rounded-lg inline-block w-11/12 md:max-w-2xl xl:max-w-3xl relative -z-10 box-border p-7 animate-dialogFadeIN overflow-hidden">
-        <span className="absolute top-5 right-5 cursor-pointer" onClick={closeDiaLog}>
+        <span
+          className="absolute top-5 right-5 cursor-pointer"
+          onClick={closeDiaLog}
+        >
           <ButtonImage
             src="/images/close.png"
             atl="Icons Close"
@@ -152,7 +155,9 @@ const OrderDialog = ({ closeDiaLog, handleShowOrderStatus, idProduct }) => {
             height={30}
           />
         </span>
-        <h3 className="text-center mb-10 text-lg tracking-widest">Bạn có thể mua hàng tại</h3>
+        <h3 className="text-center mb-10 text-lg tracking-widest">
+          Bạn có thể mua hàng tại
+        </h3>
 
         {/*Social*/}
         <div className="flex justify-center gap-6 mb-12">

@@ -4,7 +4,9 @@ import React, { useMemo } from "react";
 
 export default function header(props) {
   return (
-    <div className={`header ${props.className} flex flex-col justify-around pb-[10px] bg-black relative h-screen snap-start `}>
+    <div
+      className={`header ${props.className} flex flex-col justify-around pb-[10px] bg-black relative h-screen snap-start `}
+    >
       <div className="main flex flex-col justify-around items-center">
         <ImageBackground
           startY="-80%"
