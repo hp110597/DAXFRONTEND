@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const path = require("path");
 
+console.log(`DAX DIR ${__dirname}`);
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
