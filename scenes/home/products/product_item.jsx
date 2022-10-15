@@ -9,7 +9,7 @@ const ProductItem = (props) => {
   const { product, onShowDialog, productActive, prevProductActive } = props;
   const [indexInfor, setIndexInfor] = useState(0);
   const [widthInfor, setWidthInfor] = useState(0);
-  const refInfor = useRef(0);
+  const refInfor = useRef();
   useEffect(() => {
     setWidthInfor(refInfor.current.offsetWidth);
   }, [productActive]);
