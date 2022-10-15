@@ -1,3 +1,15 @@
 {
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "paths": {
+    "@/components/*": ["./components/*"],
+    "@/hooks/*": ["./hooks/*"],
+    "@/pages/*": ["./pages/*"],
+    "@/public/*": ["./public/*"],
+    "@/scenes/*": ["./scenes/*"],
+    "@/styles/*": ["./styles/*"],
+    "@/utils/*": ["./utils/*"]
+  },
   "exclude": ["node_modules"]
 }
