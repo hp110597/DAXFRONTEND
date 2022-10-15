@@ -1,6 +1,6 @@
 import { memo } from "react";
-import ImageBackground from "@/components/image";
-import Text from "@/components/text";
+import ImageBackground from "components/image";
+import Text from "components/text";
 const VisionMission = () => {
   return (
     <div

@@ -1,5 +1,5 @@
 import { memo, useCallback, useMemo, useState } from "react";
-import ButtonImage from "@/components/image_button";
+import ButtonImage from "components/image_button";
 
 const Pagination = (props) => {
   const { numberOfDot, className, onChangeIndexActive, dotActive } = props;

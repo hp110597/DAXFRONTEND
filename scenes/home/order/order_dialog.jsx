@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState, memo } from "react";
-import ButtonImage from "@/components/image_button";
-import InputField from "@/components/input_field";
+import ButtonImage from "components/image_button";
+import InputField from "components/input_field";
 import { useDebounce } from "hooks/helper";
 import { regexName, regexEmail, regexPhone } from "utils/regex";
-import ImageBackground from "@/components/image";
+import ImageBackground from "components/image";
 
 const OrderDialog = ({ closeDiaLog, handleShowOrderStatus, idProduct }) => {
   const [inputName, setInputName] = useState("");

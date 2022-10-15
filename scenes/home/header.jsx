@@ -1,5 +1,5 @@
-import ImageBackground from "@/components/image";
-import Video from "@/components/video";
+import ImageBackground from "components/image";
+import Video from "components/video";
 import React, { useMemo } from "react";
 
 export default function header(props) {

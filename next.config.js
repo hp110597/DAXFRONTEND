@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   webpack(config) {
-    config.resolve.alias["@/components"] = path.resolve(
+    config.resolve.alias["components"] = path.resolve(
       __dirname,
       "./components"
     );

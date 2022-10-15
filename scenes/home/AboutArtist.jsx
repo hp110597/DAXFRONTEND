@@ -1,6 +1,6 @@
-import Text from "@/components/Text";
+import Text from "components/Text";
 import React, { useRef } from "react";
-import ImageBackground from "@/components/image";
+import ImageBackground from "components/image";
 import { useOnScreen } from "hooks/helper";
 
 const AboutArtist = () => {

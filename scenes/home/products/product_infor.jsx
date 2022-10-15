@@ -1,4 +1,4 @@
-import Text from "@/components/text";
+import Text from "components/text";
 import { memo, useMemo } from "react";
 
 const ProductInfor = ({ infor, prevProductActive }) => {

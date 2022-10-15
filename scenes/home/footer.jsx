@@ -1,8 +1,8 @@
 import React, { memo } from "react";
-import TextButton from "@/components/TextButton";
-import ButtonImage from "@/components/image_button";
-import PrimaryButton from "@/components/primary_button";
-import ImageBackground from "@/components/image";
+import TextButton from "components/TextButton";
+import ButtonImage from "components/image_button";
+import PrimaryButton from "components/primary_button";
+import ImageBackground from "components/image";
 
 const Footer = () => {
   return (

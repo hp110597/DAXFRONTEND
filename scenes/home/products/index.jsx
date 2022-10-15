@@ -1,7 +1,7 @@
 import { memo, useState, useRef, useMemo } from "react";
 import ProductItem from "./product_item";
-import Pagination from "@/components/pagination";
-import ImageBackground from "@/components/image";
+import Pagination from "components/pagination";
+import ImageBackground from "components/image";
 import { useOnScreen } from "hooks/helper";
 
 const PRODUCTS = [

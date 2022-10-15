@@ -1,7 +1,7 @@
-import ImageBackground from "@/components/image";
-import Text from "@/components/text";
+import ImageBackground from "components/image";
+import Text from "components/text";
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
-import PrimaryButton from "@/components/primary_button";
+import PrimaryButton from "components/primary_button";
 import ProductInfor from "./product_infor";
 import styles from "./styles";
 

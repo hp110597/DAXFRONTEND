@@ -1,5 +1,5 @@
 import React, { memo, useCallback, useMemo } from "react";
-import ImageBackground from "@/components/image";
+import ImageBackground from "components/image";
 const PrimaryButton = (props) => {
   const handleOnClick = useCallback(() => {
     if (!props.onShowDialog) return;

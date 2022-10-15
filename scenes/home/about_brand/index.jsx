@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, useMemo, memo, useCallback } from "react";
 import StoryBrand from "./story_brand";
 import VisionMission from "./vision_mission";
-import ImageBackground from "@/components/image";
+import ImageBackground from "components/image";
 import { useOnScreen } from "hooks/helper";
 
 const AboutBrand = () => {
