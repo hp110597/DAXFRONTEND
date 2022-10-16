@@ -5,17 +5,20 @@ import React, { useMemo } from "react";
 export default function header(props) {
   return (
     <div
-      className={`header ${props.className} flex flex-col justify-around pb-[10px] bg-black relative h-screen snap-start `}
+      className={`header ${props.className} flex flex-col bg-black relative h-screen snap-start `}
     >
-      <div className="main flex flex-col justify-around items-center">
-        <ImageBackground
+    <div className="text-center z-10  ">
+    <ImageBackground
           startY="-80%"
           src="/images/DAX Original.png"
           alt="..."
-          className="animate-imageShowUp 4xl:mb-[0px] xl:mb-[10px] lg:mb-[60px] md:mb-[30px] 4xl:w-[1300px] 4xl:h-[400px]  xl:w-[512px] xl:h-[200px] lg:w-[460px] lg:h-[200px] md:w-[450px] md:h-[210px] w-[330px] h-[255px] "
+          className="animate-imageShowUp 4xl:mt-[30px] 4xl:w-[1300px] 4xl:h-[300px]  xl:w-[512px] xl:h-[200px] lg:w-[460px] lg:h-[200px] md:w-[450px] md:h-[210px] w-[330px] h-[255px] "
         />
+    </div>
+      <div className="main flex flex-col  h-[100%] items-center">
+       
         <Video
-          className=" 4xl:mb-[100px] lg:mb-[35px] md:mb-[20px] mb-[10px] "
+          className=" "
           src="video/4-3.mp4"
         />
       </div>
