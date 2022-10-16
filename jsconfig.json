@@ -1,3 +1,6 @@
 {
-  "exclude": ["node_modules"]
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "exclude": ["node_modules"], 
 }
