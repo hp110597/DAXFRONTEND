@@ -6,9 +6,9 @@ const Video = (props) => {
       className={`rounded-[20px] overflow-hidden z-10  relative ${props.className}`}
     >
       <video
-        className=" opacity-100 xl:w-[60vw] md:w-[70vw] sm:w-[80vw] w-[90vw]  "
+        className=" opacity-100 4xl:w-[67vw] xl:w-[60vw] md:w-[70vw] sm:w-[80vw] w-[90vw]  "
         src={props.src}
-        // autoPlay
+        autoPlay
         // objectFit="contain"
         loop
         muted
