@@ -26,14 +26,14 @@ export default function header(props) {
         endY="-45%"
         src="/images/pray-header.png"
         alt="..."
-        className="animate-imageShowUp 4xl:w-[450px] 4xl:h-[400px] xl:w-[200px] xl:h-[250px] lg:w-[265px] lg:h-[410px] md:w-[330px] md:h-[260px] w-[0px] h-[0px] absolute 4xl:top-[80px] lg:top-10 md:top-20 top-20 left-0"
+        className="animate-imageShowUp 4xl:w-[450px] 4xl:h-[400px] xl:w-[250px] xl:h-[300px] lg:w-[265px] lg:h-[410px] md:w-[330px] md:h-[260px] w-[0px] h-[0px] absolute 4xl:top-[80px] lg:top-10 md:top-20 top-20 left-0"
       />
       <ImageBackground
         startX="-100%"
         endX="-25%"
         src="/images/mask-header.png"
         alt="..."
-        className="animate-imageShowUp 4xl:w-[600px] 4xl:h-[540px] xl:w-[300px] xl:h-[240px] lg:w-[420px] lg:h-[380px] md:w-[270px] md:h-[235px] w-[285px] h-[265px] absolute 4xl:top-[250px] xl:top-[170px] lg:top-[80px] md:top-[250px] top-[15px] left-0"
+        className="animate-imageShowUp 4xl:w-[600px] 4xl:h-[540px] xl:w-[400px] xl:h-[340px] lg:w-[420px] lg:h-[380px] md:w-[270px] md:h-[235px] w-[285px] h-[265px] absolute 4xl:top-[250px] xl:top-[170px] lg:top-[80px] md:top-[250px] top-[15px] left-0"
       />
       <ImageBackground
         startX="-100%"
