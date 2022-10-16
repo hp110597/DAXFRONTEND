@@ -50,18 +50,16 @@ const ProductItem = (props) => {
   }, [indexInfor, widthInfor]);
   return (
     <div
-      className={`h-full w-full absolute 2xl:top-[120px] xl:top-[50px] lg:top-[100px] md:top-[50px] z-[2] ${
-        productActive || prevProductActive ? "" : "hidden"
-      }
+      className={`h-full w-full absolute 2xl:top-[120px] xl:top-[50px] lg:top-[100px] md:top-[50px] z-[2] ${productActive || prevProductActive ? "" : "hidden"
+        }
      ${productActive ? "z-[5]" : ""}`}
     >
       <div className="xl:w-[1280px] xl:gap-x-20 lg:flex 2xl:w-[1400px] 3xl:w-[1700px]">
         <ImageBackground
           src={product.image}
           alt={product.name}
-          className={`3xl:w-[500px] 3xl:h-[500px] 2xl:w-[400px] 2xl:h-[400px] xl:w-[352px] xl:h-[352px] md:w-[300px] md:h-[300px] w-[200px] h-[200px] block flex-shrink-0 ${
-            prevProductActive ? "animate-imageFadeOut" : ""
-          }`}
+          className={`3xl:w-[500px] 3xl:h-[500px] 2xl:w-[400px] 2xl:h-[400px] xl:w-[352px] xl:h-[352px] md:w-[300px] md:h-[300px] w-[200px] h-[200px] block flex-shrink-0 ${prevProductActive ? "animate-imageFadeOut" : ""
+            }`}
           startY={`${prevProductActive ? "0%" : "100%"}`}
           endY={`${prevProductActive ? "-100%" : "0%"}`}
         />
@@ -69,9 +67,8 @@ const ProductItem = (props) => {
           <Text
             animateStart={`${prevProductActive ? "0%" : "600%"}`}
             animateEnd={`${prevProductActive ? "-600%" : "0%"}`}
-            className={`font-avertaBold md:text-[48px] text-[30px] text-[#FDF8E2] md:mb-10 mb-5 ${
-              prevProductActive ? "animate-textAnimateFadeOut" : ""
-            } lg:w-full md:w-[70%] md:mx-auto w-[87%] mx-auto tracking-widest 2xl:text-[60px] 3xl:text-[80px]`}
+            className={`font-avertaBold md:text-[48px] text-[30px] text-[#FDF8E2] md:mb-10 mb-5 ${prevProductActive ? "animate-textAnimateFadeOut" : ""
+              } lg:w-full md:w-[70%] md:mx-auto w-[87%] mx-auto tracking-widest 2xl:text-[60px] 3xl:text-[80px]`}
             text={product.name}
             duration="1.2s"
           />
@@ -87,9 +84,8 @@ const ProductItem = (props) => {
           <ImageBackground
             src="/images/arrow_left_1.png"
             alt="Prev Button"
-            className={`md:w-[32px] md:h-[32px] absolute md:top-1/2 w-[25px] h-[25px] top-1/2 lg:-left-14 md:left-14 cursor-pointer ${
-              prevProductActive ? "animate-imageFadeOut" : "animate-imageFadeIn"
-            }`}
+            className={`md:w-[32px] md:h-[32px] absolute md:top-1/2 xsm:w-[25px] xsm:h-[25px] w-[20px] h-[20px] xsm:top-1/2 top-2/3 lg:-left-14 md:left-14 cursor-pointer ${prevProductActive ? "animate-imageFadeOut" : "animate-imageFadeIn"
+              }`}
             startX={`${prevProductActive ? "0%" : "-500%"}`}
             endX={`${prevProductActive ? "-200%" : "0%"}`}
             endY="-50%"
@@ -98,9 +94,8 @@ const ProductItem = (props) => {
           <ImageBackground
             src="/images/arrow_right_1.png"
             alt="Next Button"
-            className={`md:w-[32px] md:h-[32px] absolute md:top-1/2 w-[25px] h-[25px] top-1/2 right-5 3xl:right-16 2xl:right-0 xl:right-12 lg:right-32 md:right-16 cursor-pointer ${
-              prevProductActive ? "animate-imageFadeOut" : "animate-imageFadeIn"
-            }`}
+            className={`md:w-[32px] md:h-[32px] absolute md:top-1/2 xsm:w-[25px] xsm:h-[25px] w-[20px] h-[20px] xsm:top-1/2 top-2/3 right-2 3xl:right-16 2xl:right-0 xl:right-12 lg:right-32 md:right-16 cursor-pointer ${prevProductActive ? "animate-imageFadeOut" : "animate-imageFadeIn"
+              }`}
             startX={`${prevProductActive ? "0%" : "500%"}`}
             endX={`${prevProductActive ? "200%" : "0%"}`}
             endY="-50%"
@@ -108,13 +103,11 @@ const ProductItem = (props) => {
           />
           <div className="flex justify-end">
             <PrimaryButton
-              className={`2xl:pl-8 2xl:pr-24 2xl:py-4 pl-6 pr-20 py-3 rounded-2xl bg-white/30 text-white cursor-pointer text-xl 2xl:text-2xl inline-block absolute top-[250px] md:top-[280px] lg:top-[310px] 3xl:top-[340px] transition hover:!scale-125 ${
-                prevProductActive
-                  ? "animate-fadeOut invisible"
-                  : "animate-fadeIn"
-              } ${
-                productActive || prevProductActive ? "" : "hidden"
-              } xl:right-0 md:right-20 tracking-widest`}
+              className={`2xl:pl-8 2xl:pr-24 2xl:py-4 pl-6 pr-20 py-3 rounded-2xl bg-white/30 text-white cursor-pointer text-xl 2xl:text-2xl inline-block absolute xsm:top-[250px] top-[180px] md:top-[280px] lg:top-[310px] 3xl:top-[340px] transition hover:!scale-125 ${prevProductActive
+                ? "animate-fadeOut invisible"
+                : "animate-fadeIn"
+                } ${productActive || prevProductActive ? "" : "hidden"
+                } xl:right-0 md:right-20 tracking-widest`}
               srcImage="/images/arrow_right.png"
               text="Mua ngay"
               onShowDialog={onShowDialog.bind({}, product.id)}
