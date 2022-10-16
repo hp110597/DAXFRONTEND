@@ -29,21 +29,21 @@ const VisionMission = () => {
             animateStart="50%"
             animateEnd="0%"
             delay="0.5s"
-            className="font-avertaBold md:ml-20 ml-5 md:text-[40px] text-[30px] opacity-0"
+            className="font-avertaBold md:ml-20 xsm:ml-5 ml-10 md:text-[40px] text-[30px] opacity-0"
             text="Vision"
           />
           <Text
             animateStart="50%"
             animateEnd="0%"
             delay="0.8s"
-            className="md:text-center ml-10 md:text-[19px] text-xs [line-height:35px] opacity-0"
+            className="md:text-center ml-10 md:text-[19px] xsm:text-xs xsm:[line-height:35px] text-[10px] opacity-0"
             text="This is dax mission, This is dax mission, This is dax mission, This"
           />
           <Text
             animateStart="50%"
             animateEnd="0%"
             delay="1.1s"
-            className="md:text-center ml-10 md:text-xl text-xs [line-height:35px] opacity-0"
+            className="md:text-center ml-10 md:text-xl xsm:text-xs xsm:[line-height:35px] text-[10px] [line-height:30px] opacity-0"
             text="is dax mission, This is dax mission, This is dax mission."
           />
         </div>
@@ -61,14 +61,14 @@ const VisionMission = () => {
             animateStart="50%"
             animateEnd="0%"
             delay="0.8s"
-            className="text-right md:mr-10 md:text-xl text-xs mr-5 [line-height:35px] opacity-0"
+            className="text-right md:mr-10 md:text-xl  xsm:text-xs mr-5 xsm:[line-height:35px] text-[10px] [line-height:30px] opacity-0"
             text="This is dax mission, This is dax mission, This is dax mission, This"
           />
           <Text
             animateStart="50%"
             animateEnd="0%"
             delay="1.1s"
-            className="text-right md:mr-10 md:text-xl text-xs mr-5 [line-height:35px] opacity-0"
+            className="text-right md:mr-10 md:text-xl xsm:text-xs mr-5 xsm:[line-height:35px] text-[10px] [line-height:30px] opacity-0"
             text="is dax mission, This is dax mission, This is dax mission."
           />
         </div>
@@ -98,7 +98,7 @@ const VisionMission = () => {
       <ImageBackground
         src="/images/lamp.png"
         alt="lamp"
-        className="absolute xl:top-1/2 lg:left-1/2 lg:top-[350px] md:left-1/3 md:top-1/2 -z-1 w-[100px] h-[91px] top-1/2 left-1/3"
+        className="absolute xl:top-1/2 lg:left-1/2 lg:top-[350px] md:left-1/3 md:top-1/2 -z-1 xsm:w-[100px] xsm:h-[91px] w-[80px] h-[75px] top-1/2 left-1/3"
         duration="2s"
         startX="-100%"
         startY="100%"
@@ -107,7 +107,7 @@ const VisionMission = () => {
       <ImageBackground
         src="/images/star_1.png"
         alt="star 1"
-        className="absolute xl:top-1/2 lg:left-1/2 lg:top-[350px] md:left-1/3 md:top-1/2 -z-1 w-[50px] h-[93px] opacity-0 top-1/2 left-1/3"
+        className="absolute xl:top-1/2 lg:left-1/2 lg:top-[350px] md:left-1/3 md:top-1/2 -z-1 xsm:w-[50px] xsm:h-[93px] w-[40px] h-[75px] opacity-0 top-1/2 left-1/3"
         duration="2s"
         startX="-20%"
         startY="-20%"
@@ -116,7 +116,7 @@ const VisionMission = () => {
       <ImageBackground
         src="/images/logo_blue.png"
         alt="logo blue"
-        className="absolute xl:top-[365px] lg:right-[340px] lg:top-[200px] md:right-[240px] md:top-[400px] -z-1 w-[32px] h-[32px] top-2/3 right-2/3"
+        className="absolute xl:top-[365px] lg:right-[340px] lg:top-[200px] md:right-[240px] md:top-[400px] -z-1 w-[32px] h-[32px] top-2/3 right-2/3 xsm:block hidden"
         duration="2s"
       />
       <ImageBackground
@@ -128,7 +128,7 @@ const VisionMission = () => {
       <ImageBackground
         src="/images/pray.png"
         alt="pray"
-        className="absolute top-1/2 right-[-100px] -z-1 w-[240px] h-[280px]"
+        className="absolute top-1/2 right-[-100px] -z-1 xsm:w-[240px] xsm:h-[280px] w-[204px] h-[224px]"
         duration="2s"
         startX="100%"
         endY="-50%"
@@ -145,7 +145,7 @@ const VisionMission = () => {
       <ImageBackground
         src="/images/logo_light.png"
         alt="logo light"
-        className="absolute -z-1 w-[32px] h-[32px] xl:left-[410px] lg:left-[210px] lg:bottom-[140px] md:left-[210px] md:bottom-[240px] bottom-1/2 left-10"
+        className="absolute -z-1 w-[32px] h-[32px] xl:left-[410px] lg:left-[210px] lg:bottom-[140px] md:left-[210px] md:bottom-[240px] bottom-1/2 left-10 xl:block hidden"
         duration="2s"
       />
       <ImageBackground

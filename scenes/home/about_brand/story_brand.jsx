@@ -34,7 +34,7 @@ const StoryBrand = (props) => {
             lg:row-end-3 md:row-start-3 md:row-end-4 md:col-start-1 md:col-end-3 md:w-[600px] md:h-[125px] md:mx-auto"
           />
           {/*item-grid-3*/}
-          <div className="font-avertaBold text-[#FDF8E2] flex flex-col justify-between [word-spacing:5px] [line-height:40px] tracking-widest col-start-1 col-end-2 xl:text-[36px] xl:mr-0 lg:mr-[40px] lg:items-end md:items-start md:text-[24px] md:row-start-2 md:row-end-3 lg:col-start-2 lg:col-end-3 ml-8 lg:ml-0 md:mt-0 mt-10">
+          <div className="font-avertaBold text-[#FDF8E2] flex flex-col justify-between [word-spacing:5px] [line-height:40px] tracking-widest col-start-1 col-end-2 xl:text-[36px] xl:mr-0 lg:mr-[40px] lg:items-end md:items-start md:text-[24px] md:row-start-2 md:row-end-3 lg:col-start-2 lg:col-end-3 ml-8 lg:ml-0 md:mt-0 mt-10 text-[18px]">
             <Text
               animateStart="50%"
               animateEnd="0%"
@@ -50,7 +50,8 @@ const StoryBrand = (props) => {
             />
           </div>
         </div>
-        <div className="xl:container absolute bottom-48 md:right-12 tracking-wide text-right text-white flex flex-col items-end xl:right-56 xl:bottom-32 lg:bottom-36 md:bottom-40 right-5">
+        <div className="xl:container absolute xsm:bottom-48 bottom-32 right-5 left-5 md:right-12 tracking-wide xsm:text-right
+        text-center text-white flex flex-col items-end xl:right-56 xl:bottom-32 lg:bottom-36 md:bottom-40 xsm:right-5">
           <Text
             animateStart="100%"
             animateEnd="0%"
@@ -76,7 +77,7 @@ const StoryBrand = (props) => {
             animateStart="100%"
             animateEnd="0%"
             text="This is long story about dax, This is long story about dax, This is long story about dax, This is long story about dax, This is long story about dax, This is long story about dax, This is long story about dax, This is long story about dax, This is long story about dax, This is long story about dax."
-            className="opacity-0 [line-height:35px] xl:text-[20px] lg:text-[18px] md:text-[12x] text-[12px] md:hidden"
+            className="opacity-0 [line-height:35px] xl:text-[20px] lg:text-[18px] md:text-[12x] text-[8px] md:hidden"
             delay="0.6s"
           />
         </div>
@@ -111,7 +112,7 @@ const StoryBrand = (props) => {
         <ImageBackground
           src="/images/star_1.png"
           alt="star 1"
-          className="absolute md:top-[10px] md:right-[8px] -z-1 w-[50px] h-[93px] opacity-0 top-1/3 right-9"
+          className="absolute md:top-[10px] md:right-[8px] -z-1 w-[50px] h-[93px] opacity-0 top-1/3 right-9 xl:block hidden"
           duration="2s"
           startY="-40%"
         />

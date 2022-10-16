@@ -84,7 +84,7 @@ const Products = (props) => {
       {productList}
       <Pagination
         numberOfDot={PRODUCTS.length}
-        className="absolute md:bottom-8 md:right-10 md:gap-x-8 bottom-44 gap-x-4 right-1/2 translate-x-1/2 md:translate-x-0 z-[6]"
+        className="absolute md:bottom-8 md:right-10 md:gap-x-8 xsm:bottom-44 gap-x-4 xsm:right-1/2 xsm:translate-x-1/2 md:translate-x-0 z-[6] right-5 bottom-5"
         onChangeIndexActive={handleOnChangeIndexActive}
         dotActive={indexActive}
       />
@@ -99,14 +99,14 @@ const Products = (props) => {
         <ImageBackground
           src="/images/coin_3.png"
           alt="coin_3"
-          className={`absolute w-[48px] h-[48px] md:top-[60px] md:left-[50px] top-[80px] 2xl:top-[130px]`}
+          className={`absolute xsm:w-[48px] xsm:h-[48px] w-[35px] h-[35px] md:top-[60px] md:left-[50px] xms:top-[80px] 2xl:top-[130px] top-[50px]`}
           endY="-15%"
           endX="-10%"
         />
         <ImageBackground
           src="/images/logo_blue.png"
           alt="logo blue"
-          className={`absolute w-[32px] h-[32px] xl:top-[30px] xl:left-[250px] lg:top-[80px] lg:left-[200px] md:top-[30px] md:left-[250px] top-1/4 left-1/2 2xl:top-[100px]`}
+          className={`absolute w-[32px] h-[32px] xl:top-[30px] xl:left-[250px] lg:top-[80px] lg:left-[200px] md:top-[30px] md:left-[250px] top-1/4 xsm:left-1/2 2xl:top-[100px] left-[200px]`}
           endY="-15%"
           endX="-10%"
         />
@@ -124,19 +124,19 @@ const Products = (props) => {
         <ImageBackground
           src="/images/star_one_1.png"
           alt="Star one 1"
-          className={`absolute w-[32px] h-[54px] top-[50px] left-1/2`}
+          className={`absolute xsm:w-[32px] xsm:h-[54px] w-[16px] h-[27px] top-[50px] xsm:left-1/2 left-[180px]`}
           endX="-50%"
         />
         <ImageBackground
           src="/images/coin_3.png"
           alt="Coin 3"
-          className={`absolute w-[48px] h-[48px] md:top-0 md:right-[150px] right-[100px]`}
+          className={`absolute w-[48px] h-[48px] md:top-0 md:right-[150px] xms:right-[100px] right-[50px]`}
           endY="-50%"
         />
         <ImageBackground
           src="/images/branch.png"
           alt="branch"
-          className={`absolute md:w-[320px] md:h-[305px] top-10 -right-14 w-[260px] h-[240px] 2xl:w-[400px] 2xl:h-[380px]`}
+          className={`absolute md:w-[320px] md:h-[305px] top-10 -right-14 xsm:w-[260px] xsm:h-[240px] 2xl:w-[400px] 2xl:h-[380px] w-[204px] h-[192px]`}
           startX="50%"
           startY="-50%"
           duration="2s"
@@ -156,12 +156,12 @@ const Products = (props) => {
         <ImageBackground
           src="/images/logo_yellow.png"
           alt="Logo Yellow"
-          className={`absolute w-[32px] h-[32px] bottom-[200px] left-[360px]`}
+          className={`absolute w-[32px] h-[32px] xsm:bottom-[200px] xsm:left-[360px] top-2/3`}
         />
         <ImageBackground
           src="/images/flower.png"
           alt="coin_3"
-          className={`absolute w-[200px] h-[160px] bottom-0 -left-10`}
+          className={`absolute xms:w-[200px] xsm:h-[160px] w-[160px] h-[128px] bottom-0 -left-10`}
           startX="-50%"
           startY="50%"
           duration="2s"
@@ -169,12 +169,12 @@ const Products = (props) => {
         <ImageBackground
           src="/images/coin_3.png"
           alt="coin_3"
-          className={`absolute w-[48px] h-[48px] md:bottom-10 md:left-56 bottom-20 left-1/2`}
+          className={`absolute w-[48px] h-[48px] md:bottom-10 md:left-56 bottom-20 left-1/2 xms:block hidden`}
         />
         <ImageBackground
           src="/images/star_one_1.png"
           alt="Star one 1"
-          className={`absolute w-[32px] h-[54px] bottom-1/3 left-0`}
+          className={`absolute w-[32px] h-[54px] bottom-1/3 left-0 xsm:block hidden`}
         />
       </div>
     </div>
