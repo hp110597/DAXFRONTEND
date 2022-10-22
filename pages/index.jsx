@@ -71,7 +71,7 @@ export default function Home() {
       <Products onShowDialog={handleShowDialog} />
       <AboutArtist />
       <div className="h-screen">
-        <AboutBrand />
+        <AboutBrand/>
         <Footer />
       </div>
       {ORDER_DIALOG}

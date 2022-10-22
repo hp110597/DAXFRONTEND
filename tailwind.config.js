@@ -98,6 +98,15 @@ module.exports = {
           "0%": { width: "0px" },
           "100%": { width: "100%" },
         },
+        spin:{
+         "0%":{transform:"translate(0%, 0%) rotate(0deg) "},
+         "20%":{transform:"translate(34%, -8%) rotate(72deg)   "},
+         "40%":{transform:"translate(68%, -16%) rotate(144deg)   "},
+         "60%":{transform:"translate(102%, -24%) rotate(216deg)   "},
+         "80%":{transform:"translate(136%, -32%) rotate(288deg)  "},
+         "100%":{transform:"translate(170%, -40%) rotate(360deg) "},
+
+        }
       },
       animation: {
         dialogFadeIN: "dialogFadeIN 1s ease",
@@ -115,6 +124,7 @@ module.exports = {
         fadeOut: "fadeOut .7s ease-in-out",
         process: "process 3s ease-in-out forwards",
         imageShowUp: "imageShowUp 3s forwards",
+        spin:'spin 1.5s linear forwards'
       },
       fontFamily: {
         sans: "Averta,sans-serif",
